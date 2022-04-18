@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MovieRating.DB.Migrations
 {
-    public partial class primaMigrazione : Migration
+    public partial class PrimaMigrazione : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

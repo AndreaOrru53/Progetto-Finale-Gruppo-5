@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cenzo\\Desktop\\tnv\\PROGETTO FINALE\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj": {}
+    "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cenzo\\Desktop\\tnv\\PROGETTO FINALE\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj": {
+    "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cenzo\\Desktop\\tnv\\PROGETTO FINALE\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj",
         "projectName": "MovieRating.Core",
-        "projectPath": "C:\\Users\\Cenzo\\Desktop\\tnv\\PROGETTO FINALE\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj",
+        "projectPath": "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj",
         "packagesPath": "C:\\Users\\Cenzo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cenzo\\Desktop\\tnv\\PROGETTO FINALE\\MovieComments\\src\\MovieRating.Core\\obj\\",
+        "outputPath": "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Cenzo\\AppData\\Roaming\\NuGet\\NuGet.Config",

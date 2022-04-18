@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kjsxZ4sfdMzHTdwy6UhZ11M89ZrgK9z/jGA2xt6wZZ42r/lXW1d2PmFAn21cuZWXIDHzuh5hinc7N/9VJIrwRQ==",
+  "dgSpecHash": "673XxQCepImXQLd41/aDbt7FsBCtE5kWGlnLTgLWe4rVNGfSBNZ1i44URbTwVJsz+6OGwgQAuwXTt296OWWbtQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Cenzo\\Desktop\\tnv\\PROGETTO FINALE\\MovieComments\\src\\MovieRating.Sql\\MovieRating.DB.csproj",
+  "projectFilePath": "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Sql\\MovieRating.DB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cenzo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Cenzo\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.1\\microsoft.entityframeworkcore.6.0.1.nupkg.sha512",

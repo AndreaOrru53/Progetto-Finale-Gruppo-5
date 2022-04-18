@@ -4,9 +4,12 @@ using MovieRating.Core.Eccezzioni;
 using MovieRating.Core.Model;
 using MovieRating.RestAPI.Model;
 using Microsoft.AspNetCore.Mvc;
+using MovieRating.DB.Service;
 
 namespace MovieRating.RestAPI.Controllers
 {
+
+    
     [ApiController]
     [Route("comments")]
     public class MovieRatingController : ControllerBase
@@ -54,6 +57,7 @@ namespace MovieRating.RestAPI.Controllers
                     user_id = comment.user_id,
                     movie_id = comment.movie_id
                 }));
+
             }
             catch (ShortComment e)
             {

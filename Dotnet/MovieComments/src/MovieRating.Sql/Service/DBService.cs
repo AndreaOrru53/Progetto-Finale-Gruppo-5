@@ -14,7 +14,6 @@ namespace MovieRating.DB.Service
     public class DBService
     {
         private DbContextManager _contextManager;
-
         public DBService(DbContextManager contextManager)
         {
             _contextManager = contextManager;
