@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MovieRating.Core.Service;
+using MovieRating.DB.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +19,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<IStorageService, InMemoryStorageService>();
+builder.Services.AddSingleton<IStorageService, DBStorageService>();
 builder.Services.AddSingleton<MovieRatingService>();
 
 var app = builder.Build();
