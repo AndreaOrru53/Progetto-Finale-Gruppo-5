@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RatingController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,14 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('/ratings', RatingController::class);
+
+Route::get('/ratings/movie/id/{movie_id}', [RatingController::class, 
+    'getMovieRatingsByMovieId']);
+
+Route::get('/ratings/user/id/{user_id}', [RatingController::class, 
+    'getMovieRatingsByUserId']);
+
+Route::get('/ratings/user/and/movie/id/{user_id}/{movie_id}', [RatingController::class, 
+    'getMovieRatingsByUserIdAndMovieId']);
