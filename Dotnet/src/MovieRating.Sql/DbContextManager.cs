@@ -10,7 +10,7 @@ namespace MovieRating.DB
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=localhost;Port=3306;Database=movie_rating;Uid=root;";
+            var connectionString = "Server=localhost;Port=3306;Database=moviedb;Uid=root;";
             var version = new MySqlServerVersion(new Version(10, 4, 22));
 
             optionsBuilder.UseMySql(connectionString, version);
