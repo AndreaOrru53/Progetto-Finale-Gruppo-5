@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreaOrru53/Progetto-Finale-Gruppo-5.git"
+  },
+  "keywords": [
+    "1234"
+  ],
+  "author": "Andrea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreaOrru53/Progetto-Finale-Gruppo-5/issues"
+  },
+  "homepage": "https://github.com/AndreaOrru53/Progetto-Finale-Gruppo-5#readme"
+}
