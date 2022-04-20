@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "start"
   },
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/AndreaOrru53/Progetto-Finale-Gruppo-5/issues"
   },
-  "homepage": "https://github.com/AndreaOrru53/Progetto-Finale-Gruppo-5#readme"
+  "homepage": "https://github.com/AndreaOrru53/Progetto-Finale-Gruppo-5#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
 }
