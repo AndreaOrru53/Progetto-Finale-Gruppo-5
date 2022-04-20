@@ -10,8 +10,8 @@ using MovieRating.DB;
 namespace MovieRating.DB.Migrations
 {
     [DbContext(typeof(DbContextManager))]
-    [Migration("20220418102206_PrimaMigrazione..")]
-    partial class PrimaMigrazione
+    [Migration("20220420154443_primaMigrazione")]
+    partial class primaMigrazione
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

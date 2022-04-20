@@ -13,18 +13,18 @@ namespace MovieRating.DB.Mapper
         public static MovieRatingEntity ToCommentEntity(Comment comment) => new()
         {
             Id = comment.id,
-            Body = comment.comment,
             UserId = comment.user_id,
-            MovieId = comment.movie_id
+            MovieId = comment.movie_id,
+            Body = comment.comment
         };
 
 
         public static Comment ToComment(MovieRatingEntity movieRatingEntity) => new()
         {
             id = movieRatingEntity.Id,
-            comment = movieRatingEntity.Body,
             user_id = movieRatingEntity.UserId,
-            movie_id = movieRatingEntity.MovieId
+            movie_id = movieRatingEntity.MovieId,
+            comment = movieRatingEntity.Body
         };
     }
 }
