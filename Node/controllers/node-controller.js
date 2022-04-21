@@ -1,17 +1,17 @@
-import Movie from "../model/Movie.js";
+import FavouriteMovie from "../model/FavouritesMovie.js";
 
-export const getMovies = async (req, res) => {
+export const getAllFavouritesMovies = async (req, res) => {
     try {
-        const movie = await Movie.findAll();
+        const movie = await FavouriteMovie.findAll();
         res.send(movie);
     } catch (err) {
         console.log(err);
     }
 }
 
-export const getMovieById = async (req, res) => {
+export const getFavouriteMovieById = async (req, res) => {
     try {
-        const movie = await Movie.findOne({
+        const movie = await FavouriteMovie.findOne({
             where: {
                 id: req.params.id
             }
@@ -28,11 +28,11 @@ export const getMovieById = async (req, res) => {
     }
 }
 
-export const createMovie = async (req, res) => {
+export const createFavouriteMovie = async (req, res) => {
     try {
-        await Movie.create(req.body);
+        await FavouriteMovie.create(req.body);
         res.json({
-            "message": "Movie Created"
+            "message": "Favourite Movie Created"
         });
     } catch (err) {
         console.log(err);
@@ -40,15 +40,15 @@ export const createMovie = async (req, res) => {
     }
 }
 
-export const updateMovie = async (req, res) => {
+export const updateFavouriteMovie = async (req, res) => {
     try {
-        await Movie.update(req.body, {
+        await FavouriteMovie.update(req.body, {
             where: {
                 id: req.params.id
             }
         });
         res.json({
-            "message": "Movie Updated"
+            "message": "Favourite Movie Updated"
         });
     } catch (err) {
         console.log(err);
@@ -56,15 +56,15 @@ export const updateMovie = async (req, res) => {
     }
 }
 
-export const deleteMovie = async (req, res) => {
+export const deleteFavouriteMovie = async (req, res) => {
     try {
-        await Movie.destroy({
+        await FavouriteMovie.destroy({
             where: {
                 id: req.params.id
             }
         });
         res.json({
-            "message": "Movie Deleted"
+            "message": "Favourite Movie Deleted"
         });
     } catch (err) {
         console.log(err);

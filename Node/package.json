@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "start"
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/AndreaOrru53/Progetto-Finale-Gruppo-5#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.3",
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0"
