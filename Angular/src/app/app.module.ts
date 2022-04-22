@@ -7,6 +7,8 @@ import { LoginComponent } from '../components/login/login.component';
 import { HomeComponent } from '../components/home/home.component';
 import { MovieCommentComponent } from '../components/movie-comment/movie-comment.component';
 import { MovieRatingComponent } from '../components/movie-rating/movie-rating.component';
+import { MoviesComponent } from '../components/movies/movies.component';
+import { MoviesDetailComponent } from '../components/movies-detail/movies-detail.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { MovieRatingComponent } from '../components/movie-rating/movie-rating.co
     LoginComponent,
     HomeComponent,
     MovieCommentComponent,
-    MovieRatingComponent
+    MovieRatingComponent,
+    MoviesComponent,
+    MoviesDetailComponent
   ],
   imports: [
     BrowserModule,
