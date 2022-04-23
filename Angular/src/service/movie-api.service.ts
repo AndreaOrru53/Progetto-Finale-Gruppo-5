@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Movies } from 'src/models/Movies';
+import { MovieComment } from 'src/models/MovieComment';
 
 
 @Injectable({
@@ -15,4 +16,5 @@ export class MovieApiService {
   getMovie(){
     return this.httpClient.get<Movies>(`https://api.themoviedb.org/3/movie/550?api_key=${this.apiKey}`);
   }
+
 }

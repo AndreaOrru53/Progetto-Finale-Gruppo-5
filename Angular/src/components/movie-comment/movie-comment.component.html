@@ -1,1 +1,12 @@
 <p>movie-comment works!</p>
+
+<h1>Comment List</h1>
+
+<ul>
+    <li *ngFor="let comment of comments">
+        {{ comment.id}} 
+        {{ comment.user_id }}
+        {{ comment.movie_id }}   
+        {{comment.comment}}   
+    </li>
+</ul>
