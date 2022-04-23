@@ -1,4 +1,8 @@
 <p>movies works!</p>
 <h1>aooo</h1>
-<h1>{{movies?.original_title}}</h1>
-<h1>{{movies?.title}}</h1>
+
+<ul>
+    <li *ngFor="let movie of movies?.results">
+        {{ movie.original_title }} 
+    </li>
+</ul>
