@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MovieRating } from 'src/models/MovieRating';
 import { Movies } from 'src/models/Movies';
 import { MovieApiService } from 'src/service/movie-api.service';
 
