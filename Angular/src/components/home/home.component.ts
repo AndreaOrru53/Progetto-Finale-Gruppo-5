@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieFav } from 'src/models/MovieFavor';
+import { BackendService } from 'src/service/backend.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  movies: MovieFav[] = []
+  isVisible=true;
+  constructor(private backendService: BackendService) { }
 
   ngOnInit(): void {
-  }
-isVisible=true;
+    this.backendService.getListaPreferiti().subscribe({
+      next: (res) => this.movies = res,
+      error: () => console.log('Error!'),
+      complete: () => console.log('Complete')
+  });
+}
+
 }
