@@ -32,3 +32,20 @@ C:\Users\Cenzo\Desktop\TNV-PROGETTO FINALE\Progetto-Finale-Gruppo-5\Dotnet\Movie
 C:\Users\Cenzo\Desktop\TNV-PROGETTO FINALE\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\obj\Debug\net6.0\MovieRating.DB.pdb
 C:\Users\Cenzo\Desktop\TNV-PROGETTO FINALE\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\obj\Debug\net6.0\MovieRating.DB.genruntimeconfig.cache
 C:\Users\Cenzo\Desktop\TNV-PROGETTO FINALE\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\obj\Debug\net6.0\ref\MovieRating.DB.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\bin\Debug\net6.0\MovieRating.DB.deps.json
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\bin\Debug\net6.0\MovieRating.DB.runtimeconfig.json
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\bin\Debug\net6.0\MovieRating.DB.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\bin\Debug\net6.0\MovieRating.DB.pdb
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\bin\Debug\net6.0\MovieRating.Core.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\bin\Debug\net6.0\MovieRating.Core.pdb
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\obj\Debug\net6.0\MovieRating.DB.csproj.AssemblyReference.cache
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\obj\Debug\net6.0\MovieRating.DB.GeneratedMSBuildEditorConfig.editorconfig
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\obj\Debug\net6.0\MovieRating.DB.AssemblyInfoInputs.cache
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\obj\Debug\net6.0\MovieRating.DB.AssemblyInfo.cs
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\obj\Debug\net6.0\MovieRating.DB.csproj.CoreCompileInputs.cache
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\obj\Debug\net6.0\MovieRating.DB.csproj.CopyComplete
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\obj\Debug\net6.0\MovieRating.DB.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\obj\Debug\net6.0\refint\MovieRating.DB.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\obj\Debug\net6.0\MovieRating.DB.pdb
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\obj\Debug\net6.0\MovieRating.DB.genruntimeconfig.cache
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Sql\obj\Debug\net6.0\ref\MovieRating.DB.dll

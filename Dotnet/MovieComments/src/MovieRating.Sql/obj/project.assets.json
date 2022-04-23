@@ -760,19 +760,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Cenzo\\.nuget\\packages\\": {}
+    "C:\\Users\\sfagi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Sql\\MovieRating.DB.csproj",
+      "projectUniqueName": "D:\\TNV\\Progetto_finale_gruppo_5\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Sql\\MovieRating.DB.csproj",
       "projectName": "MovieRating.DB",
-      "projectPath": "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Sql\\MovieRating.DB.csproj",
-      "packagesPath": "C:\\Users\\Cenzo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Sql\\obj\\",
+      "projectPath": "D:\\TNV\\Progetto_finale_gruppo_5\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Sql\\MovieRating.DB.csproj",
+      "packagesPath": "C:\\Users\\sfagi\\.nuget\\packages\\",
+      "outputPath": "D:\\TNV\\Progetto_finale_gruppo_5\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Sql\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Cenzo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sfagi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -786,8 +786,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj": {
-              "projectPath": "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj"
+            "D:\\TNV\\Progetto_finale_gruppo_5\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj": {
+              "projectPath": "D:\\TNV\\Progetto_finale_gruppo_5\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj"
             }
           }
         }

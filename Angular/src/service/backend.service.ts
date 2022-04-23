@@ -36,7 +36,10 @@ export class BackendService {
     return this.httpClient.get<MovieComment>(`http://localhost:5299/comments/${id}`);
   }
 
-
+  //LARAVEL
+  getAllMovieRating() {
+    return this.httpClient.get<MovieRating[]>(`http://localhost:8000/api/ratings`);
+  }
 
 
 

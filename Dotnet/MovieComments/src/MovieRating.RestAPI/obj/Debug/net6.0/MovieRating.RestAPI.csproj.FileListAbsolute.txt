@@ -110,3 +110,41 @@ C:\Users\Cenzo\Desktop\TNV-PROGETTO FINALE\Progetto-Finale-Gruppo-5\Dotnet\Movie
 C:\Users\Cenzo\Desktop\TNV-PROGETTO FINALE\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\MovieRating.RestAPI.pdb
 C:\Users\Cenzo\Desktop\TNV-PROGETTO FINALE\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\MovieRating.RestAPI.genruntimeconfig.cache
 C:\Users\Cenzo\Desktop\TNV-PROGETTO FINALE\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\ref\MovieRating.RestAPI.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\appsettings.Development.json
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\appsettings.json
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\MovieRating.RestAPI.exe
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\MovieRating.RestAPI.deps.json
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\MovieRating.RestAPI.runtimeconfig.json
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\MovieRating.RestAPI.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\MovieRating.RestAPI.pdb
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\Humanizer.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\MySqlConnector.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\MovieRating.Core.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\MovieRating.DB.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\MovieRating.Core.pdb
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\bin\Debug\net6.0\MovieRating.DB.pdb
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\MovieRating.RestAPI.csproj.AssemblyReference.cache
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\MovieRating.RestAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\MovieRating.RestAPI.AssemblyInfoInputs.cache
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\MovieRating.RestAPI.AssemblyInfo.cs
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\MovieRating.RestAPI.csproj.CoreCompileInputs.cache
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\MovieRating.RestAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\MovieRating.RestAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\staticwebassets.build.json
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\staticwebassets.development.json
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\scopedcss\bundle\MovieRating.RestAPI.styles.css
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\MovieRating.RestAPI.csproj.CopyComplete
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\MovieRating.RestAPI.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\refint\MovieRating.RestAPI.dll
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\MovieRating.RestAPI.pdb
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\MovieRating.RestAPI.genruntimeconfig.cache
+D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.RestAPI\obj\Debug\net6.0\ref\MovieRating.RestAPI.dll

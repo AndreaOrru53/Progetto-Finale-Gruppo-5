@@ -1,5 +1,5 @@
 export interface MovieRating {
-    movie_id: number;
-    movie_rating: number;
-    user_id: number;
-  }
+  movie_rating: number;
+  movie_id: number;
+  user_id: number;
+}

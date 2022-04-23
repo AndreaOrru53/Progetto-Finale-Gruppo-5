@@ -1,1 +1,9 @@
 <p>movie-rating works!</p>
+
+<ul>
+    <li *ngFor="let rating of ratings">
+        {{ rating.user_id }}
+        {{ rating.movie_id }}  
+        {{ rating.movie_rating }}   
+    </li>
+</ul>

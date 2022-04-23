@@ -20,10 +20,9 @@ class RatingController extends Controller
     public function index()
     {
         return response()->Json(
-            [
-                new RatingCollection(Rating::all()),
-                'Response Status' => Response::HTTP_OK
-            ]
+            DB::table('ratings')->
+            select('movie_id', 'movie_rating', 'user_id')->
+            get(),
         );
     }
 
