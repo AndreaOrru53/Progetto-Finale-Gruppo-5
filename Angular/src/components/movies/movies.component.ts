@@ -9,6 +9,7 @@ import { MovieApiService } from 'src/service/movie-api.service';
   styleUrls: ['./movies.component.scss']
 })
 export class MoviesComponent implements OnInit {
+
   movies: Movies | null = null;
 
   constructor(private movieApiService: MovieApiService) { }
