@@ -26,25 +26,26 @@ export interface Movies {
     vote_count: number;
   }
   
-  export interface Spokenlanguage {
+  
+   interface Spokenlanguage {
     english_name: string;
     iso_639_1: string;
     name: string;
   }
   
-  export interface Productioncountry {
+   interface Productioncountry {
     iso_3166_1: string;
     name: string;
   }
   
-  export interface Productioncompany {
+   interface Productioncompany {
     id: number;
     logo_path?: string;
     name: string;
     origin_country: string;
   }
   
-  export interface Genre {
+   interface Genre {
     id: number;
     name: string;
   }
