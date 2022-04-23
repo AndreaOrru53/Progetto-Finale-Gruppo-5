@@ -4,6 +4,7 @@ import { User } from 'src/models/User';
 import { MovieComment } from 'src/models/MovieComment';
 import { MovieFav } from 'src/models/MovieFavor';
 import { MovieRating } from 'src/models/MovieRating';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -25,4 +26,19 @@ export class BackendService {
   deleteFilmPreferito(movie_id: number | null){
     return this.httpClient.delete<MovieFav>(`http://localhost:5000/favouritemovie/${movie_id}`);
   }
+
+  //DOTNET
+  getAllMovieComment(){
+    return this.httpClient.get<MovieComment[]>(`http://localhost:5299/comments`);
+  }
+
+  getMovieCommentById(id: number | null){
+    return this.httpClient.get<MovieComment>(`http://localhost:5299/comments/${id}`);
+  }
+
+
+
+
+
+
 }

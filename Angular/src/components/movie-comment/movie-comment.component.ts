@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieComment } from 'src/models/MovieComment';
+import { BackendService } from 'src/service/backend.service';
 
 @Component({
   selector: 'app-movie-comment',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieCommentComponent implements OnInit {
 
-  constructor() { }
+  comments: MovieComment[] = [];
+
+  id1: number = 1;
+
+  constructor(
+    private backendService:BackendService 
+  ) { }
 
   ngOnInit(): void {
+    this.backendService.getAllMovieComment().subscribe({
+      next: (res) => this.comments = res,
+      error: () => console.log('Error!'),
+      complete: () => console.log('Complete')
+    });
   }
+
+
 
 }

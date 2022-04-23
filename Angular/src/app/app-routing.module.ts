@@ -10,10 +10,10 @@ import { LoginComponent } from '../components/login/login.component';
 const routes: Routes = [
   { path: 'login', component : LoginComponent },
   { path: 'home', component : HomeComponent},
-  { path: 'movie-comment', component : MoviesDetailComponent},
+  { path: 'movie-comment', component : MovieCommentComponent},
   { path: 'movie-rating', component : MovieRatingComponent},
   { path: 'movies', component : MoviesComponent},
-  { path: 'movies/:movieId', component : MoviesComponent},
+  { path: 'movies/:movieId', component : MoviesDetailComponent},
 
   { path : '', redirectTo: '/home', pathMatch: 'full'}
 ];

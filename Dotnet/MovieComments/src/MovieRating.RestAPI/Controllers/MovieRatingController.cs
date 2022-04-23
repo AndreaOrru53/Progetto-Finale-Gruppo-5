@@ -4,6 +4,7 @@ using MovieRating.Core.Eccezzioni;
 using MovieRating.Core.Model;
 using MovieRating.RestAPI.Model;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Cors;
 using MovieRating.DB.Service;
 
 namespace MovieRating.RestAPI.Controllers
