@@ -60,6 +60,7 @@ namespace MovieRating.Core.Service
             {
                 throw new ErrorMovieIdComment(id);
             }
+            
         }
 
         private static bool ValidateCommentUserId(int userId) => userId > 0;
