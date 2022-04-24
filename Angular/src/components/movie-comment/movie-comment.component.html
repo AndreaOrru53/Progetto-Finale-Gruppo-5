@@ -4,9 +4,9 @@
 
 <ul>
     <li *ngFor="let comment of comments">
-        {{ comment.id}} 
-        {{ comment.user_id }}
-        {{ comment.movie_id }}   
-        {{comment.comment}}   
+        <strong>Id: </strong> <a [routerLink]="['/movie-comment', comment.id]">{{ comment.id}}</a>
+        <strong> Movie Id:</strong> {{ comment.user_id }}
+        <strong>User Id:</strong> {{ comment.movie_id }}   
+        <strong>Commento:</strong> {{comment.comment}}   
     </li>
 </ul>
