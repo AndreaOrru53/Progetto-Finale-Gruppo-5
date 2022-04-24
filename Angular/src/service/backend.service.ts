@@ -5,6 +5,7 @@ import { MovieComment } from 'src/models/MovieComment';
 import { MovieFav } from 'src/models/MovieFavor';
 import { MovieRating } from 'src/models/MovieRating';
 import { environment } from '../environments/environment';
+import { NgForm } from '@angular/forms';
 
 @Injectable({
   providedIn: 'root'
@@ -34,6 +35,10 @@ export class BackendService {
 
   getMovieCommentById(id: number | null){
     return this.httpClient.get<MovieComment>(`http://localhost:5299/comments/${id}`);
+  }
+
+  addMovieComment(movieCommentForm: NgForm){
+    return this.httpClient.post(`http://localhost:5299/comments/`, movieCommentForm.value);
   }
 
   //LARAVEL
