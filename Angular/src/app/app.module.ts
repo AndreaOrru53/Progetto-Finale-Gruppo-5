@@ -9,6 +9,7 @@ import { MovieRatingComponent } from '../components/movie-rating/movie-rating.co
 import { MoviesComponent } from '../components/movies/movies.component';
 import { MoviesDetailComponent } from '../components/movies-detail/movies-detail.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MovieCommentDetailComponent } from '../components/movie-comment-detail/movie-comment-detail.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     MovieRatingComponent,
     MoviesComponent,
     MoviesDetailComponent,
+    MovieCommentDetailComponent,
   ],
   imports: [
     BrowserModule,
