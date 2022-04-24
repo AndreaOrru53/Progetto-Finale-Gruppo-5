@@ -30,10 +30,16 @@ namespace MovieRating.DB.Service
             return comment;
         }
 
-        public List<MovieRatingEntity> GetByUserId(int userId) => _contextManager
+        public List<MovieRatingEntity> GetByUserId(int userId) {
+            
+            var comment = FindUserIdOrFail(userId);
+
+            return _contextManager
             .Comments
             .Where(c => c.UserId == userId)
             .ToList();
+
+        }
 
         public MovieRatingEntity Add(MovieRatingEntity comment)
         {
@@ -68,6 +74,17 @@ namespace MovieRating.DB.Service
             if (comment == null)
             {
                 throw new NotFoundComment(id);
+            }
+
+            return comment;
+        }
+
+         private MovieRatingEntity FindUserIdOrFail(int userId)
+        {
+            var comment = _contextManager.Comments.FirstOrDefault(x => x.UserId == userId);
+            if (comment == null)
+            {
+                throw new NotFoundUserId(userId);
             }
 
             return comment;

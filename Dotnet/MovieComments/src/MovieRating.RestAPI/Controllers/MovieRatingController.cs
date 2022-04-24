@@ -23,14 +23,20 @@ namespace MovieRating.RestAPI.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<Comment>> GetAll([FromQuery(Name = "user-id")] int userId = 0)
-        {
-            if (userId > 0)
+        public ActionResult<List<Comment>> GetAll()=> Ok(_movieRatingService.GetAllComments());
+        
+
+        [HttpGet]
+        [Route("userId/{user-id}")]
+        public ActionResult<List<Comment>> GetAllByuserId([FromRoute(Name = "user-id")] int userId) {
+            try
             {
                 return Ok(_movieRatingService.GetAllCommentsByUserId(userId));
             }
-
-            return Ok(_movieRatingService.GetAllComments());
+            catch (NotFoundUserId e)
+            {
+                return NotFound(BuildErrorResponse(e));
+            }
         }
 
         [HttpGet]
