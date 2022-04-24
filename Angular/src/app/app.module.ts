@@ -1,15 +1,17 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { LoginComponent } from '../components/login/login.component';
+import { AddMovieCommentComponent } from '../components/add-movie-comment/add-movie-comment.component';
 import { HomeComponent } from '../components/home/home.component';
+import { LoginComponent } from '../components/login/login.component';
+import { MovieCommentDetailComponent } from '../components/movie-comment-detail/movie-comment-detail.component';
 import { MovieCommentComponent } from '../components/movie-comment/movie-comment.component';
 import { MovieRatingComponent } from '../components/movie-rating/movie-rating.component';
-import { MoviesComponent } from '../components/movies/movies.component';
 import { MoviesDetailComponent } from '../components/movies-detail/movies-detail.component';
-import { HttpClientModule } from '@angular/common/http';
-import { MovieCommentDetailComponent } from '../components/movie-comment-detail/movie-comment-detail.component';
+import { MoviesComponent } from '../components/movies/movies.component';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +23,13 @@ import { MovieCommentDetailComponent } from '../components/movie-comment-detail/
     MoviesComponent,
     MoviesDetailComponent,
     MovieCommentDetailComponent,
+    AddMovieCommentComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
