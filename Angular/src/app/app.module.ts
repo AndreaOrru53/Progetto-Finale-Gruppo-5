@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from '../components/navbar/navbar.component';
 import { GameComponent } from '../components/game/game.component';
+import { FooterComponent } from '../components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { GameComponent } from '../components/game/game.component';
     AddMovieCommentComponent,
     NavbarComponent,
     GameComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
