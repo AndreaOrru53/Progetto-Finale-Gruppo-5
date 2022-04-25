@@ -13,6 +13,7 @@ import { MoviesComponent } from '../components/movies/movies.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from '../components/navbar/navbar.component';
+import { GameComponent } from '../components/game/game.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { NavbarComponent } from '../components/navbar/navbar.component';
     MovieCommentDetailComponent,
     AddMovieCommentComponent,
     NavbarComponent,
+    GameComponent,
   ],
   imports: [
     BrowserModule,
