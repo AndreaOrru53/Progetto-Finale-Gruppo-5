@@ -42,11 +42,40 @@ export class BackendService {
   }
 
   //LARAVEL
+
   getAllMovieRating() {
     return this.httpClient.get<MovieRating[]>(`http://localhost:8000/api/ratings`);
   }
 
+  getMovieRatingById(id: number | null) {
+    return this.httpClient.get<MovieRating>(`http://localhost:8000/api/ratings/${id}`)
+  }
 
+  getMovieRatingsByUserId(user_id: number) {
+    return this.httpClient.get<MovieRating>(`http://localhost:8000/api/ratings/user/id/${user_id}`)
+  }
 
+  getMovieRatingsByUserIdAndMovieId(user_id: number, movie_id: number) {
+    return this.httpClient.get<MovieRating>(`http://localhost:8000/api/ratings/user/and/movie/id/${user_id}/${movie_id}`)
+  }
 
+  createMovieRating(movie_rating: number, movie_id:number, user_id: number) {
+    const url = `http://localhost:8000/api/ratings`;
+    const body = {
+        movie_rating, movie_id, user_id
+    }
+    return this.httpClient.post(url, body)
+  }
+
+  updateMovieRating(movie_rating: number, movie_id:number, user_id: number) {
+    const url = `http://localhost:8000/api/ratings`;
+    const body = {
+        movie_rating, movie_id, user_id
+    }
+    return this.httpClient.put(url, body)
+  }
+
+  deleteMovieRatingById(id: number | null) {
+    return this.httpClient.delete(`http://localhost:8000/api/ratings/${id}`)
+  }
 }
