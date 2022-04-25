@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddMovieCommentComponent } from 'src/components/add-movie-comment/add-movie-comment.component';
+import { GameComponent } from 'src/components/game/game.component';
+import { ListFilmAndHistoryComponent } from 'src/components/list-film-and-history/list-film-and-history.component';
 import { MovieCommentDetailComponent } from 'src/components/movie-comment-detail/movie-comment-detail.component';
 import { MovieCommentComponent } from 'src/components/movie-comment/movie-comment.component';
 import { MovieRatingComponent } from 'src/components/movie-rating/movie-rating.component';
@@ -18,6 +20,8 @@ const routes: Routes = [
   { path: 'movie-rating', component : MovieRatingComponent},
   { path: 'movies', component : MoviesComponent},
   { path: 'movies/:movieId', component : MoviesDetailComponent},
+  { path: 'movie-game', component : GameComponent},
+  { path: 'listFilm-listHistory/:date1/:date2', component : ListFilmAndHistoryComponent},
 
   { path : '', redirectTo: '/home', pathMatch: 'full'}
 ];

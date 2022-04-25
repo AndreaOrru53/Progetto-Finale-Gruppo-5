@@ -1,1 +1,79 @@
-<p>game works!</p>
+<app-navbar></app-navbar>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous">
+
+    <style>
+        .header {
+            height: 13vh;
+            background-color: #296aa3;
+        }
+
+        .main {
+            height: 80vh;
+        }
+
+        .sidebar {
+            background-color: #19b3d5;
+        }
+
+        .sidebar .list-group-item {
+            border: 1px solid rgba(0, 0, 0, .125) !important;
+            background-color: #296aa3;
+        }
+
+        .content {
+            background-color: #296aa3;
+        }
+
+        .content .card {
+            background-color: #19b3d5;
+        }
+
+        .footer {
+            height: 10vh;
+            background-color: #FAEBD7;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                height: 20vh !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <app-navbar></app-navbar>
+
+    <div class="container-fluid vh-100">
+        
+        
+        <div class="form">
+
+            <form #mioForm="ngForm" (ngSubmit)="invio(mioForm)">
+                <div class="mb-3">
+                  <label for="InputFirstDate" class="form-label">Data 1</label>
+                  <input type="date" class="form-control" id="FirstDate" aria-describedby="data-bs-target" value="2022-05-01" name="date1" ngModel>
+                </div>
+                <div class="mb-3">
+                    <label for="InputLastDate" class="form-label">Data 2</label>
+                    <input type="date" class="form-control" id="LastDate" aria-describedby="data-bs-target" value="2022-05-01" name="date2" ngModel>
+                  </div>
+                <button type="submit" class="btn btn-primary" >Submit</button>
+              </form>
+
+        </div>
+        
+
+    </div>
+    <app-footer></app-footer>
+
+
+

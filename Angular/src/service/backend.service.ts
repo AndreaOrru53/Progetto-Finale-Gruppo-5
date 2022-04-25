@@ -1,11 +1,10 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from 'src/models/User';
+import { Injectable } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { MovieComment } from 'src/models/MovieComment';
 import { MovieFav } from 'src/models/MovieFavor';
 import { MovieRating } from 'src/models/MovieRating';
-import { environment } from '../environments/environment';
-import { NgForm } from '@angular/forms';
+import {MovieTMDB} from 'src/models/MovieTMDB'
 
 @Injectable({
   providedIn: 'root'
@@ -77,5 +76,11 @@ export class BackendService {
 
   deleteMovieRatingById(id: number | null) {
     return this.httpClient.delete(`http://localhost:8000/api/ratings/${id}`)
+  }
+
+
+  //TMDB
+  getPopularFilm(date1: string | null, date2: string | null,){
+    return this.httpClient.get<MovieTMDB>(`https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=${date1}&primary_release_date.lte=${date2}&sort_by=popularity.desc&api_key=317291492b88ae1febc86ead73dbe43b`);
   }
 }

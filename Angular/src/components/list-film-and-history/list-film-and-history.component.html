@@ -1,0 +1,8 @@
+<h1>Film Più Popolari</h1>
+
+<ul>
+    <li *ngFor="let movie of moviesTMDB?.results | slice:0:10">
+        {{ movie.id}}, 
+        {{movie.original_title}}
+    </li>
+</ul>

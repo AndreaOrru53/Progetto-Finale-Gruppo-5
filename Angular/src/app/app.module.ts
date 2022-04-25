@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from '../components/navbar/navbar.component';
 import { GameComponent } from '../components/game/game.component';
 import { FooterComponent } from '../components/footer/footer.component';
+import { ListFilmAndHistoryComponent } from '../components/list-film-and-history/list-film-and-history.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { FooterComponent } from '../components/footer/footer.component';
     NavbarComponent,
     GameComponent,
     FooterComponent,
+    ListFilmAndHistoryComponent,
   ],
   imports: [
     BrowserModule,
