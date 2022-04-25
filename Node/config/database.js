@@ -1,7 +1,7 @@
 import { Sequelize } from "sequelize";
  
 const db = new Sequelize({
-    database: 'favouritesmoviedb',
+    database: 'moviedb',
     username: 'root',
     password: '',
     host: 'localhost',

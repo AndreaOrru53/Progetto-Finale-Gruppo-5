@@ -1,3 +1,5 @@
 export interface MovieFav{
-    movie_id: number;
+    id: number;
+    movie_Id: number;
+    user_Id: number;
 }

@@ -9,7 +9,7 @@ import { BackendService } from 'src/service/backend.service';
 })
 export class HomeComponent implements OnInit {
 
-  movies: MovieFav[] = []
+  movies: MovieFav[] = [];
   isVisible=true;
   constructor(private backendService: BackendService) { }
 
