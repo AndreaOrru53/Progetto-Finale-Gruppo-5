@@ -4,12 +4,12 @@ package com.themoviedb.movies.Model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="users")
+@Table(name = "users")
 public class Users {
-   @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "user_id", nullable = false)
-    private int user_id;
+    private int user_id = 0;
 
     @Column(unique = true)
     private String username;
@@ -23,9 +23,9 @@ public class Users {
         return user_id;
     }
 
-   /* public void setUser_id(int user_id) {
+    public void setUser_id(int user_id) {
         this.user_id = user_id;
-    }*/
+    }
 
     public Users() {
     }
@@ -41,6 +41,7 @@ public class Users {
     public String getPassword() {
         return password;
     }
+
     public void setPassword(String password) {
         this.password = password;
     }
@@ -72,8 +73,10 @@ public class Users {
     @Override
     public String toString() {
         return "User(" +
-                "Username: " + this.username +"\n" +
-                "Password: " + this.password +"\n" +
+                "Username: " + this.username + "\n" +
+                "Password: " + this.password + "\n" +
                 "Email: " + this.email + ")";
     }
+
+
 }

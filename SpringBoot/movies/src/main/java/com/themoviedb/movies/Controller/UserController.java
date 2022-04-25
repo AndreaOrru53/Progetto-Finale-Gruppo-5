@@ -1,5 +1,6 @@
 package com.themoviedb.movies.Controller;
 
+import com.themoviedb.movies.Bean.AuthenticationBean;
 import com.themoviedb.movies.Exceptions.DatiMancantiExceptions;
 import com.themoviedb.movies.Exceptions.UserNotFoundExceptions;
 import com.themoviedb.movies.Model.Users;
@@ -14,6 +15,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
 public class LoginController {
     @Autowired
     private UsersService usersService;
+
 
     //Utente utente;
 
