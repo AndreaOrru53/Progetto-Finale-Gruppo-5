@@ -9,7 +9,6 @@ import { MovieCommentDetailComponent } from '../components/movie-comment-detail/
 import { MovieCommentComponent } from '../components/movie-comment/movie-comment.component';
 import { MovieRatingComponent } from '../components/movie-rating/movie-rating.component';
 import { MoviesDetailComponent } from '../components/movies-detail/movies-detail.component';
-import { MoviesComponent } from '../components/movies/movies.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from '../components/navbar/navbar.component';
@@ -24,7 +23,6 @@ import { ListFilmAndHistoryComponent } from '../components/list-film-and-history
     HomeComponent,
     MovieCommentComponent,
     MovieRatingComponent,
-    MoviesComponent,
     MoviesDetailComponent,
     MovieCommentDetailComponent,
     AddMovieCommentComponent,
