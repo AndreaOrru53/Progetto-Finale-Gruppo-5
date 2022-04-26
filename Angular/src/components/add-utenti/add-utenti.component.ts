@@ -7,7 +7,7 @@ import { Utenti, HttpClientService } from 'src/service/http-client.service';
   styleUrls: ['./add-utenti.component.scss']
 })
 export class AddUtentiComponent implements OnInit {
-  uten: Utenti = new Utenti("","");
+  uten: Utenti = new Utenti("","", "");
 
   constructor(
     private httpClientService: HttpClientService
