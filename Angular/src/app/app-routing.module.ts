@@ -9,10 +9,18 @@ import { MovieRatingComponent } from 'src/components/movie-rating/movie-rating.c
 import { MoviesDetailComponent } from 'src/components/movies-detail/movies-detail.component';
 import { MoviesComponent } from 'src/components/movies/movies.component';
 import { HomeComponent } from '../components/home/home.component';
-import { LoginComponent } from '../components/login/login.component';
+
+import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { CustomersComponent } from './customers/customers.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
+import { AuthGuardService } from './service/auth-guard.service';
 
 const routes: Routes = [
   { path: 'login', component : LoginComponent },
+  { path:'', component: CustomersComponent, canActivate:[AuthGuardService]},
+  { path:'addCustomers', component: AddCustomerComponent, canActivate:[AuthGuardService]},
+  { path: 'logout', component: LogoutComponent, canActivate:[AuthGuardService] },
   { path: 'home', component : HomeComponent},
   { path: 'movie-comment', component : MovieCommentComponent},
   { path: 'movie-comment/:movieCommentId', component : MovieCommentDetailComponent},
