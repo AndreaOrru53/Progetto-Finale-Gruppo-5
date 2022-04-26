@@ -2,7 +2,7 @@
 <h1>aooo</h1>
 
 <ul>
-    <li *ngFor="let movie of movies?.results">
+    <li *ngFor="let movie of movies?.results | slice:0:10;">
         {{ movie.original_title }} 
     </li>
 </ul>
