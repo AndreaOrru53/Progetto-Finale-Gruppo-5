@@ -17,3 +17,21 @@ div.form{
     padding: 150px 500px;
 
 }
+
+div.ListaFilm{
+    display: none;
+}
+
+.btn btn-primary:active{
+    div.ListaFilm{
+        display: block;
+    }
+
+    .container-fluid vh-100{
+        display: none;
+    }
+    
+}
+
+
+
