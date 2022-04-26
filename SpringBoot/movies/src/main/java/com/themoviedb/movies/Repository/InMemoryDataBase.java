@@ -1,35 +1,35 @@
 package com.themoviedb.movies.Repository;
 
-import com.themoviedb.movies.Model.Users;
+import com.themoviedb.movies.Model.User;
 
 import java.util.*;
 
 public class InMemoryDataBase {
-    static Map<Integer, Users> utenti = new HashMap<>();
+    static Map<Integer, User> utenti = new HashMap<>();
     static int lastIndex = 0;
 
-    public static int addUtente(Users users){
-        if(users != null) {
-            users.setUser_id(++lastIndex);
-            utenti.put(users.getUser_id(), users);
+    public static int addUtente(User user){
+        if(user != null) {
+            user.setUser_id(++lastIndex);
+            utenti.put(user.getUser_id(), user);
             return 1;
         }
         return 0;
     }
 
 
-    public static Users getUtenteById(int user_id){
-        if(user_id != 0 && user_id > 0) {
+    public static User getUtenteById(int user_id){
+        if(user_id > 0) {
             return utenti.get(user_id);
         }
         return null;
     }
 
-    public static Users getUtenteByUserName(String username) {
+    public static User getUtenteByUserName(String username) {
         if(username != null)  {
-            for(Users users : utenti.values() ){
-                if (users.getUserename().equals(username)) {
-                    return users;
+            for(User user : utenti.values() ){
+                if (user.getUserename().equals(username)) {
+                    return user;
                 }
             }
         }
@@ -47,12 +47,12 @@ public class InMemoryDataBase {
         return "Utente non registrato o dato inserito non valido!";
     }*/
 
-    public static Users getUtenteByUserPass(String username, String password) {
+    public static User getUtenteByUserPass(String username, String password) {
         if((username != null) && (password != null) ){
-            for(Users users : utenti.values() ){
-                if (users.getUserename().equals(username) && users.getPassword().equals(password)){
+            for(User user : utenti.values() ){
+                if (user.getUserename().equals(username) && user.getPassword().equals(password)){
                     System.out.println("Ok");
-                    return users;
+                    return user;
                 }
             }
         }
@@ -60,12 +60,12 @@ public class InMemoryDataBase {
         return null;
     }
 
-    public static List<Users> getAllUtenti(){
-        Collection<Users> utentiValues =  utenti.values();
+    public static List<User> getAllUtenti(){
+        Collection<User> utentiValues =  utenti.values();
         return new ArrayList<>(utentiValues);
     }
 
-    public static Users updateUtente(int user_id, Users user){
+    public static User updateUtente(int user_id, User user){
         if(user_id > 0) {
             user.setUser_id(user_id);
             utenti.put(user_id, user);

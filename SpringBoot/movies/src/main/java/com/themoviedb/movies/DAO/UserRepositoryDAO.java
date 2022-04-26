@@ -1,11 +1,22 @@
 package com.themoviedb.movies.DAO;
 
-import com.themoviedb.movies.Model.Users;
+import com.themoviedb.movies.Model.User;
 import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepositoryDAO extends CrudRepository<Users, Integer> {
-    Users findUserByUsername(String username);
-    Users findByUsernameContainsAndPasswordContains(String username, String password);
-    Users findPasswordByUsername(String username);
-    Users findById(int utente_id);
+import java.util.Optional;
+
+public interface UserRepositoryDAO extends CrudRepository<User, Integer> {
+    User findUserByUsername(String username);
+    User findUserByEmail(String email);
+    User findPasswordByUsername(String username);
+    User findPasswordByemail(String email);
+    User findById(int utente_id);
+    Iterable<User> findByUsernameContainsAndPasswordContains(String username, String password);
+
+    Optional<User> findByUsernameOrEmail(String username, String email);
+    Boolean existsByUsername(String username);
+    Boolean existsByEmail(String email);
+
+
+
 }

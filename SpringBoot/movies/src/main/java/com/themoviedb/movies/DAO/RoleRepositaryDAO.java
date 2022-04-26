@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;
 
-public interface RoleRepositary  extends CrudRepository<Role, Integer> {
+public interface RoleRepositaryDAO extends CrudRepository<Role, Integer> {
 
-    Optional<Role> findByName(String username);
+    Optional<Role> findByName(String name);
 }
