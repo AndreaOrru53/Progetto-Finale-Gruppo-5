@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthenticationService } from '../service/authentication.service';
+import { AuthenticationService } from 'src/service/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,7 @@ import { AuthenticationService } from '../service/authentication.service';
 export class LoginComponent implements OnInit {
 
   username = 'user'
-  password = ''
+  password = 'password'
   invalidLogin = false
 
   constructor(private router: Router,
