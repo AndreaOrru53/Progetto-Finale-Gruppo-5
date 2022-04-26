@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class AutehenticationService {
+export class AuthenticationService {
 
   constructor() { }
   authenticate(username: string, password: string){

@@ -4,6 +4,14 @@
         <img src="../../assets/favicon.png" alt="" width="30" height="28" class="d-inline-block align-text-top">
         Film&History
         </a>
+        <ul class="navbar-nav">
+          <li><a *ngIf="loginService.isUserLoggedIn()"  routerLink="/" class="nav-link">Vedi tutti gli Utenti</a></li>
+          <li><a  *ngIf="loginService.isUserLoggedIn()" routerLink="/addCustomers" class="nav-link">Aggiungi Utente</a></li>
+          <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+          <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">LogOut</a></li>
+        
+        </ul>
+        
         <a class="navbar-brand" href="../login">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">Login</button> 
         </a>
