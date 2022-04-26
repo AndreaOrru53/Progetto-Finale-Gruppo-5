@@ -1,12 +1,24 @@
 
-li{
-    border-radius: 10%;
-    padding: 5%;
+ul {
+    padding: 0;
+    margin-left: 5%;
 }
 
-.card-img-top{
-    width: 40%;
+li{
+    display: inline-block;
+    padding: 5%;
+    padding-bottom: 0;
 }
+
+.card img {
+    width: 100%;
+    margin: auto;
+}
+
+.card {
+    margin: 0;
+}
+
 ul{
     list-style: none;
 }
