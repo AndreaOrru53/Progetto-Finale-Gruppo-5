@@ -1,8 +1,16 @@
-<p>movies works!</p>
-<h1>aooo</h1>
+
+<h1>Lista Film</h1>
 
 <ul>
-    <li *ngFor="let movie of movies?.results">
-        {{ movie.original_title }} 
+    <li *ngFor="let movie of movies?.results | slice:0:10;">
+        <div class="card" style="width: 18rem;">
+            <img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" class="card-img-top" alt={{movie.title}}>
+            <div class="card-body">
+              <h5 class="card-title">{{movie.original_title}}</h5>
+              <a href="#" class="btn btn-primary">Salva nei Preferiti</a>
+            </div>
+          </div>
     </li>
 </ul>
+
+  
