@@ -2,26 +2,38 @@ package com.themoviedb.movies;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 
-import javax.sql.DataSource;
 
-import static org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType.H2;
 
 @SpringBootApplication
 public class MoviesApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MoviesApplication.class, args);
+
 	}
 
-	@Bean
-	DataSource dataSource() {
-		return new EmbeddedDatabaseBuilder()
-				.setType(H2)
-				.addScript("classpath:org/springframework/security/core/userdetails/jdbc/users.ddl")
-				.build();
-	}
+
+
+	/**
+	 * Ricordate di creare il DataBase con nome 'moviedb'
+	 * una volta creato scheda SQL e copiate il codice qui sotto.
+	 * esegui e poi potere avviare l' applicazione
+
+
+	  create table users(
+	  	username varchar(50) not null primary key,
+	  	password varchar(500) not null,
+	  	enabled boolean not null
+	  );
+
+	  create table authorities (
+	  	username varchar(50) not null,
+	  	authority varchar(50) not null,
+	  	constraint fk_authorities_users foreign key(username) references users(username)
+	  );
+	  create unique index ix_auth_username on authorities (username,authority);
+
+	 */
 
 }

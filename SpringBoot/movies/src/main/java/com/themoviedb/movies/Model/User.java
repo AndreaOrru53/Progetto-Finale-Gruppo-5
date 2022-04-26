@@ -1,23 +1,44 @@
 package com.themoviedb.movies.Model;
 
 
+
+
 import javax.persistence.*;
+import java.util.Set;
+
 
 @Entity
-@Table(name = "users")
-public class Users {
+@Table(name = "user", uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"username"}),
+        @UniqueConstraint(columnNames = {"email"})
+})
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "user_id", nullable = false)
-    private int user_id = 0;
+    private int user_id;
 
-    @Column(unique = true)
+    @Column(name = "username", nullable = false)
     private String username;
-    private String password;
-    @Column(unique = true)
+
+    @Column(name = "email", nullable = false)
     private String email;
+
+    @Column(name = "password", nullable = false)
+    private String password;
+
     @Column
     private boolean enabled;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "role_id"))
+    private Set<Role> roles;
+
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
+    }
 
     public int getUser_id() {
         return user_id;
@@ -27,7 +48,7 @@ public class Users {
         this.user_id = user_id;
     }
 
-    public Users() {
+    public User() {
     }
 
     public String getUserename() {
@@ -79,4 +100,7 @@ public class Users {
     }
 
 
+    public Set<Role> getRoles() {
+        return roles;
+    }
 }
