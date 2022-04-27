@@ -59,11 +59,12 @@
 
             <form #mioForm="ngForm" (ngSubmit)="invio(mioForm)">
                 <div class="mb-3">
-                  <label for="InputFirstDate" class="form-label">Data 1</label>
+                    <h2>Trova film filtrando per date</h2>
+                  <label for="InputFirstDate" class="form-label">Data di partenza</label>
                   <input type="date" class="form-control" id="FirstDate" aria-describedby="data-bs-target" value="2022-05-01" name="date1" ngModel>
                 </div>
                 <div class="mb-3">
-                    <label for="InputLastDate" class="form-label">Data 2</label>
+                    <label for="InputLastDate" class="form-label">Data fine</label>
                     <input type="date" class="form-control" id="LastDate" aria-describedby="data-bs-target" value="2022-05-01" name="date2" ngModel>
                   </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
