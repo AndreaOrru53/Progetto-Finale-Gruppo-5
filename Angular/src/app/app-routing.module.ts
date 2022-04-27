@@ -19,10 +19,10 @@ import { AddRatingAndCommentComponent } from 'src/components/add-rating-and-comm
 
 
 const routes: Routes = [
-    { path: 'login', component : LoginComponent },
-    { path:'', component: UtentiComponent, canActivate:[AuthGuardService]},
-    { path:'addUtenti', component: AddUtentiComponent, canActivate:[AuthGuardService]},
-    { path: 'logout', component: LogoutComponent, canActivate:[AuthGuardService] },  
+  { path: 'login', component : LoginComponent },
+  { path:'', component: UtentiComponent, canActivate:[AuthGuardService]},
+  { path:'addUtenti', component: AddUtentiComponent, canActivate:[AuthGuardService]},
+  { path: 'logout', component: LogoutComponent, canActivate:[AuthGuardService] },  
   { path: 'home', component : HomeComponent},
   { path: 'movie-comment', component : MovieCommentComponent},
   { path: 'movie-comment/:movieCommentId', component : MovieCommentDetailComponent},
