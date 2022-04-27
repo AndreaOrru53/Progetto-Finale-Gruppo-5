@@ -41,9 +41,7 @@ export class ListFilmAndHistoryComponent implements OnInit {
 
 
   addMoviefavour(userId: number, movieId: number){
-    this.movieId=movieId;
-    this.userId=userId;
-    let newMovie: MovieFav ={movie_Id: this.movieId, user_Id:this.userId};
+    let newMovie: MovieFav ={movie_Id: movieId, user_Id: userId};
     this.backendService.postFilmPreferito(newMovie).subscribe({
       next: (res) => newMovie = res,
       error: () => console.log('Error!'),

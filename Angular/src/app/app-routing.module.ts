@@ -14,6 +14,7 @@ import { UtentiComponent } from 'src/components/utenti/utenti.component';
 import { LoginComponent } from 'src/components/login/login.component';
 import { LogoutComponent } from 'src/components/logout/logout.component';
 import { AuthGuardService } from 'src/service/auth-guard.service';
+import { ListFavouMovieComponent } from 'src/components/list-favou-movie/list-favou-movie.component';
 
 
 const routes: Routes = [
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'movies/:movieId', component : MoviesDetailComponent},
   { path: 'movie-game', component : GameComponent},
   { path: 'listFilm-listHistory/:date1/:date2', component : ListFilmAndHistoryComponent},
+  { path: 'listFavouMovie', component : ListFavouMovieComponent},
 
   { path : '', redirectTo: '/home', pathMatch: 'full'}
 ];

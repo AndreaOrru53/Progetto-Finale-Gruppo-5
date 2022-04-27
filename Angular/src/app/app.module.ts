@@ -18,6 +18,7 @@ import { NavbarComponent } from '../components/navbar/navbar.component';
 import { UtentiComponent } from '../components/utenti/utenti.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ListFavouMovieComponent } from '../components/list-favou-movie/list-favou-movie.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { AppComponent } from './app.component';
     GameComponent,
     FooterComponent,
     ListFilmAndHistoryComponent,
+    ListFavouMovieComponent,
   ],
   imports: [
     BrowserModule,
