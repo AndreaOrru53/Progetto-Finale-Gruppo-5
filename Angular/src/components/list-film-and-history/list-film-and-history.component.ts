@@ -14,8 +14,7 @@ import { BackendService } from 'src/service/backend.service';
 })
 export class ListFilmAndHistoryComponent implements OnInit {
 
-  
-
+  movieFavourList: MovieFav[] | null = null;
   moviesTMDB: MovieListTMDB | null = null;
   data1: string | null =  null;
   data2: string | null = null;
@@ -26,6 +25,7 @@ export class ListFilmAndHistoryComponent implements OnInit {
   
 
   ngOnInit(): void {
+    this.backendService.getListaPreferiti().subscribe(res => this.movieFavourList = res);
     this.route.params.subscribe((params) => this.data1 = params['date1']);
     this.route.params.subscribe((params) => this.data2 = params['date2']);
     this.backendService.getPopularFilm(this.data1, this.data2).subscribe({
@@ -45,11 +45,7 @@ export class ListFilmAndHistoryComponent implements OnInit {
       error: () => console.log('Error!'),
       complete: () => console.log(newMovie)
     });
-
-
     window.location.href=`http://localhost:4200/addRatingAndComment/${newMovie.movie_Id}`;
   }
-
-
 
 }
