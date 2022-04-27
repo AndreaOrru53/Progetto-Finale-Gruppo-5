@@ -2,7 +2,9 @@ ul {
     padding: 0;
     margin-left: 5%;
 }
-
+.btn{
+    margin-top: 30px;
+}
 li{
     display: inline-block;
     padding: 5%;
@@ -10,14 +12,72 @@ li{
 }
 
 .card img {
-    width: 100%;
     margin: auto;
 }
 
 .card {
-    margin: 0;
+    margin-left: 150px;
+    margin-top: 60px;
+    margin-left: 290px;
+       
 }
 
 ul{
     list-style: none;
 }
+hr{
+    border: 0;
+}
+body {
+    width: 97%;
+    font-family: Arial, Verdana, sans-serif;
+    color: #000000;
+    margin: auto;}
+   
+   
+   p {
+    margin: 3%;}
+   
+   
+   
+   h1, h2, h3 {
+    text-align: center}
+   
+   
+   
+   /* Create four equal columns that floats next to each other */
+   .column {
+    float: left;
+    width: 50%;
+   }
+   
+   
+   
+   /* Clear floats */
+   .row:after {
+    content: "";
+    display: table;
+    clear: both;
+   }
+   
+   
+   
+   /* Responsive layout - makes a two column-layout instead of four columns */
+   @media screen and (max-width: 900px) {
+    .column {
+    width: 50%;
+    }
+   }
+   
+   
+   
+   /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+   @media screen and (max-width: 600px) {
+    .column {
+    width: 100%;
+    }
+   }
+   .sec{
+       margin-top: 80px;
+       margin-right: 450px;
+   }
