@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../../service/authentication.service';
 
@@ -9,7 +10,7 @@ import { AuthenticationService } from '../../service/authentication.service';
 })
 export class LoginComponent implements OnInit {
 
-  username = 'user'
+  username = ''
   password = ''
   invalidLogin = false
 
@@ -19,9 +20,9 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  checkLogin(){
-    if(this.loginservice.authenticate(this.username, this.password)){
-      this.router.navigate([''])
+  checkLogin(loginForm: NgForm){
+    if(this.loginservice.authenticate(loginForm.controls['username'].value, loginForm.controls['password'].value)){
+      this.router.navigate(['/home'])
       this.invalidLogin = false
     }else{
       this.invalidLogin = true

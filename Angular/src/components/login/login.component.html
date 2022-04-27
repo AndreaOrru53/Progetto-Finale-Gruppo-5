@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<form action="action_page.php" method="post">
+<form #loginForm="ngForm" (ngSubmit)="checkLogin(loginForm)">
     <div class="imgcontainer">
       <img src="img_avatar2.png" alt="Avatar" class="avatar">
     </div>
@@ -12,7 +12,7 @@
         <label for="psw"><b>Password</b></label>
         Password: <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="password" required>
       </div>  
-      <button (click)=checkLogin() class="btn btn-success">Login</button>
+      <button class="btn btn-success">Login</button>
       <!-- <button type="submit">Login</button>  -->
       
     </div>

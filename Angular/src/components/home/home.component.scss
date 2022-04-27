@@ -1,5 +1,6 @@
 
 .container-fluid {
+    background-image: url('../../assets/cinemaPerHomeComponent.jpg');
     padding:0;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -12,4 +13,8 @@
 
 .bt{
     margin-top: 0%;
+}
+
+.botton-play{
+    padding:250px 600px;
 }
