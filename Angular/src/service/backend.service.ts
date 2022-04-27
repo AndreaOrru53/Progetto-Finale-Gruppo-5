@@ -62,12 +62,9 @@ export class BackendService {
     return this.httpClient.get<MovieRating>(`http://localhost:8000/api/ratings/user/and/movie/id/${user_id}/${movie_id}`)
   }
 
-  createMovieRating(movie_rating: number, movie_id:number, user_id: number) {
-    const url = `http://localhost:8000/api/ratings`;
-    const body = {
-        movie_rating, movie_id, user_id
-    }
-    return this.httpClient.post(url, body)
+  createMovieRating(movie_rating: MovieRating) {
+    const url = `http://localhost:8000/api/ratings/`;
+    return this.httpClient.post(url, movie_rating)
   }
 
   updateMovieRating(movie_rating: number, movie_id:number, user_id: number) {

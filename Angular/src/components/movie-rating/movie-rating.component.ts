@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { MovieRating } from 'src/models/MovieRating';
 import { BackendService } from 'src/service/backend.service';
 
@@ -9,15 +10,23 @@ import { BackendService } from 'src/service/backend.service';
 })
 export class MovieRatingComponent implements OnInit {
 
-  ratings: MovieRating[] = [];
+  @Input() movieId!: number;
+  @Input() userId!: number;
+
+  movieRating: any | null = null;
+  
 
   constructor(private backendService:BackendService) { }
 
   ngOnInit(): void {
-    this.backendService.getAllMovieRating().subscribe({
-      next: (res) => this.ratings = res,
-      error: () => console.log('Error!'),
-      complete: () => console.log('Complete')
+  
+  }
+
+  invio(ratingform: NgForm){
+    let movieRating: MovieRating ={movie_id: this.movieId, user_id: this.userId, movie_rating: ratingform.controls['rate'].value};
+    this.backendService.createMovieRating(movieRating).subscribe({
+      error: () => console.log(ratingform.controls['rate'].value, this.movieId, this.userId),
+      complete: () => console.log('funziona')
     });
   }
 
