@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieFav } from 'src/models/MovieFavor';
-import { MovieTMDB } from 'src/models/MovieTMDB';
+import { MovieListTMDB } from 'src/models/MovieListTMDB';
 import { AuthenticationService } from 'src/service/authentication.service';
 import { BackendService } from 'src/service/backend.service';
 
@@ -12,7 +12,7 @@ import { BackendService } from 'src/service/backend.service';
 export class ListFavouMovieComponent implements OnInit {
 
   moviesFavou: MovieFav [] = [];
-  moviesTMDB: MovieTMDB | null = null;
+  moviesTMDB: MovieListTMDB | null = null;
   
   constructor(private backendService:BackendService,  public loginService: AuthenticationService) { }
 

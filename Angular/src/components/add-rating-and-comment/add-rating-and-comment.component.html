@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+
+<div class="card" style="width: 30rem;">
+    <img src="https://image.tmdb.org/t/p/w300{{movieTMDB?.poster_path}}" class="card-img-top" alt="{{movieTMDB?.title}}">
+    <div class="card-body">
+      <h5 class="card-title">{{movieTMDB?.original_title}}</h5>
+    </div>
+    <app-movie-rating></app-movie-rating>
+    <app-add-movie-comment [movieId]="movieId" [userId]="1"></app-add-movie-comment>
+
+    <button onclick="history.back()">Go Back</button>
+  </div>

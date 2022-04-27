@@ -19,6 +19,7 @@ import { UtentiComponent } from '../components/utenti/utenti.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListFavouMovieComponent } from '../components/list-favou-movie/list-favou-movie.component';
+import { AddRatingAndCommentComponent } from '../components/add-rating-and-comment/add-rating-and-comment.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ListFavouMovieComponent } from '../components/list-favou-movie/list-fav
     FooterComponent,
     ListFilmAndHistoryComponent,
     ListFavouMovieComponent,
+    AddRatingAndCommentComponent,
   ],
   imports: [
     BrowserModule,

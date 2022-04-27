@@ -3,8 +3,10 @@ import { Injectable } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MovieComment } from 'src/models/MovieComment';
 import { MovieFav } from 'src/models/MovieFavor';
+import { MovieListTMDB } from 'src/models/MovieListTMDB';
 import { MovieRating } from 'src/models/MovieRating';
-import {MovieTMDB} from 'src/models/MovieTMDB'
+import { MovieTMDB } from '../models/MovieTMDB';
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +14,8 @@ import {MovieTMDB} from 'src/models/MovieTMDB'
 export class BackendService {
 
   constructor(private httpClient: HttpClient) { }
+
+  apiKey: string = '317291492b88ae1febc86ead73dbe43b';
 
   //NODE
   getFilmPreferito(movie_id: number | null){
@@ -36,8 +40,8 @@ export class BackendService {
     return this.httpClient.get<MovieComment>(`http://localhost:5299/comments/${id}`);
   }
 
-  addMovieComment(movieCommentForm: NgForm){
-    return this.httpClient.post(`http://localhost:5299/comments/`, movieCommentForm.value);
+  addMovieComment(movieComment: MovieComment){
+    return this.httpClient.post(`http://localhost:5299/comments/`, movieComment);
   }
 
   //LARAVEL
@@ -81,6 +85,10 @@ export class BackendService {
 
   //TMDB
   getPopularFilm(date1: string | null, date2: string | null,){
-    return this.httpClient.get<MovieTMDB>(`https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=${date1}&primary_release_date.lte=${date2}&sort_by=popularity.desc&api_key=317291492b88ae1febc86ead73dbe43b`);
+    return this.httpClient.get<MovieListTMDB>(`https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=${date1}&primary_release_date.lte=${date2}&sort_by=popularity.desc&api_key=${this.apiKey}`);
+  }
+
+  getMovieById(movieId: number | null){
+    return this.httpClient.get<MovieTMDB>(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${this.apiKey}&language=it-it`);
   }
 }

@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <ul *ngIf="loginService.isUserLoggedIn()">
     <li *ngFor="let movie of moviesFavou | slice:0:10;">
-        {{movie.movie_Id}}, {{movie.user_id}
+        {{movie.movie_Id}}, {{movie.user_Id}}
     </li>
 </ul>
 <app-footer></app-footer>

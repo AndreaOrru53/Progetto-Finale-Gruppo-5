@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { MovieComment } from 'src/models/MovieComment';
 import { BackendService } from 'src/service/backend.service';
 
 @Component({
@@ -9,14 +10,18 @@ import { BackendService } from 'src/service/backend.service';
 })
 export class AddMovieCommentComponent implements OnInit {
 
+  @Input() movieId!: number;
+  @Input() userId!: number;
+  
   constructor(private backendService: BackendService) { }
 
   ngOnInit(): void {
   }
 
   AddMovieComment(movieCommentForm: NgForm) {
-    this.backendService.addMovieComment(movieCommentForm).subscribe({
-      next: () => window.location.href = 'http://localhost:4200/movie-comment',
+    let movieComment: MovieComment ={movie_id: this.movieId, user_id: this.userId, comment: movieCommentForm.controls['comment'].value};
+    this.backendService.addMovieComment(movieComment).subscribe({
+      next: () => console.log(movieComment),
       error: () => console.log('error')
     });
   

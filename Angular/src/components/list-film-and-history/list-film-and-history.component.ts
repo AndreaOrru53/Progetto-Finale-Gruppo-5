@@ -2,7 +2,7 @@ import { query } from '@angular/animations';
 import { Component, getNgModuleById, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { MovieFav } from 'src/models/MovieFavor';
-import { MovieTMDB } from 'src/models/MovieTMDB';
+import { MovieListTMDB } from 'src/models/MovieListTMDB';
 import { AuthenticationService } from 'src/service/authentication.service';
 import { BackendService } from 'src/service/backend.service';
 
@@ -16,13 +16,11 @@ export class ListFilmAndHistoryComponent implements OnInit {
 
   
 
-  moviesTMDB: MovieTMDB | null = null;
+  moviesTMDB: MovieListTMDB | null = null;
   data1: string | null =  null;
   data2: string | null = null;
-  movieId: number | null = null;
-  userId: number | null = null;
  
-  constructor(private backendService:BackendService, private route: ActivatedRoute, public loginService: AuthenticationService,  private router:Router) { 
+  constructor(private backendService:BackendService, private route: ActivatedRoute, public loginService: AuthenticationService) { 
 
   }
   
@@ -47,6 +45,9 @@ export class ListFilmAndHistoryComponent implements OnInit {
       error: () => console.log('Error!'),
       complete: () => console.log(newMovie)
     });
+
+
+    window.location.href=`http://localhost:4200/addRatingAndComment/${newMovie.movie_Id}`;
   }
 
 
