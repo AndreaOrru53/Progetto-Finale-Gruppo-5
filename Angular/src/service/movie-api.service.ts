@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Movies } from 'src/models/Movies';
 import { MovieComment } from 'src/models/MovieComment';
+import { MovieTMDB } from 'src/models/MovieTMDB';
 
 
 @Injectable({
@@ -15,7 +15,7 @@ export class MovieApiService {
   constructor(private httpClient: HttpClient) { }
 
   getMovie(){
-    return this.httpClient.get<Movies>(`${this.apiUrl}${this.apiKey}`);
+    return this.httpClient.get<MovieTMDB>(`${this.apiUrl}${this.apiKey}`);
   }
 
 }
