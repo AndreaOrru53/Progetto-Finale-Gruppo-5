@@ -17,11 +17,12 @@ export class ListFilmAndHistoryComponent implements OnInit {
   
 
   moviesTMDB: MovieTMDB | null = null;
-  movieFavou: MovieFav | null = null;
   data1: string | null =  null;
   data2: string | null = null;
+  movieId: number | null = null;
+  userId: number | null = null;
  
-  constructor(private backendService:BackendService, private route: ActivatedRoute, public loginService: AuthenticationService) { 
+  constructor(private backendService:BackendService, private route: ActivatedRoute, public loginService: AuthenticationService,  private router:Router) { 
 
   }
   
@@ -37,16 +38,19 @@ export class ListFilmAndHistoryComponent implements OnInit {
 
   }
 
-  getMovieFavou(){
-    return this.movieFavou;
+
+
+  addMoviefavour(userId: number, movieId: number){
+    this.movieId=movieId;
+    this.userId=userId;
+    let newMovie: MovieFav ={movie_Id: this.movieId, user_Id:this.userId};
+    this.backendService.postFilmPreferito(newMovie).subscribe({
+      next: (res) => newMovie = res,
+      error: () => console.log('Error!'),
+      complete: () => console.log(newMovie)
+    });
   }
 
 
-
-  addMoviefavour(userId: number | null, movieId: number | null){
-    console.log(movieId, userId);
-  }
-
-  
 
 }

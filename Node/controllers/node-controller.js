@@ -30,9 +30,10 @@ export const getFavouriteMovieById = async (req, res) => {
 
 export const createFavouriteMovie = async (req, res) => {
     try {
-        await FavouriteMovie.create(req.body);
+        const foavouMovie= await FavouriteMovie.create(req.body);
         res.json({
-            "message": "Favourite Movie Created"
+            "message": "Favourite Movie Created",
+            "data": foavouMovie
         });
     } catch (err) {
         console.log(err);

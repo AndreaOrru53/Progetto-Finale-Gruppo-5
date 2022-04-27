@@ -21,7 +21,7 @@ export class BackendService {
     return this.httpClient.get<MovieFav[]>(`http://localhost:5000/favouritemovie`);
   }
   postFilmPreferito(movieFav: MovieFav){
-    return this.httpClient.post<MovieFav>(`http://localhost:5000/favouritemovie`, movieFav);
+    return this.httpClient.post<MovieFav>(`http://localhost:5000/favouritemovie/`, movieFav);
   }
   deleteFilmPreferito(movie_id: number | null){
     return this.httpClient.delete<MovieFav>(`http://localhost:5000/favouritemovie/${movie_id}`);
