@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MovieComment } from 'src/models/MovieComment';
 import { MovieRating } from 'src/models/MovieRating';
 import { BackendService } from 'src/service/backend.service';
 
@@ -21,5 +20,7 @@ export class MovieRatingComponent implements OnInit {
       complete: () => console.log('Complete')
     });
   }
+
+
 
 }
