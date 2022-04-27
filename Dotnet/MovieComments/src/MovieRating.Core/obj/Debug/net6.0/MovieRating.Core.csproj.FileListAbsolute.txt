@@ -52,3 +52,17 @@ D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\sr
 D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Core\obj\Debug\net6.0\MovieRating.Core.pdb
 D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Core\obj\Debug\net6.0\MovieRating.Core.genruntimeconfig.cache
 D:\TNV\Progetto_finale_gruppo_5\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Core\obj\Debug\net6.0\ref\MovieRating.Core.dll
+C:\Users\andre\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Core\bin\Debug\net6.0\MovieRating.Core.deps.json
+C:\Users\andre\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Core\bin\Debug\net6.0\MovieRating.Core.runtimeconfig.json
+C:\Users\andre\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Core\bin\Debug\net6.0\MovieRating.Core.dll
+C:\Users\andre\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Core\bin\Debug\net6.0\MovieRating.Core.pdb
+C:\Users\andre\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Core\obj\Debug\net6.0\MovieRating.Core.csproj.AssemblyReference.cache
+C:\Users\andre\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Core\obj\Debug\net6.0\MovieRating.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\andre\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Core\obj\Debug\net6.0\MovieRating.Core.AssemblyInfoInputs.cache
+C:\Users\andre\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Core\obj\Debug\net6.0\MovieRating.Core.AssemblyInfo.cs
+C:\Users\andre\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Core\obj\Debug\net6.0\MovieRating.Core.csproj.CoreCompileInputs.cache
+C:\Users\andre\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Core\obj\Debug\net6.0\MovieRating.Core.dll
+C:\Users\andre\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Core\obj\Debug\net6.0\refint\MovieRating.Core.dll
+C:\Users\andre\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Core\obj\Debug\net6.0\MovieRating.Core.pdb
+C:\Users\andre\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Core\obj\Debug\net6.0\MovieRating.Core.genruntimeconfig.cache
+C:\Users\andre\Progetto-Finale-Gruppo-5\Dotnet\MovieComments\src\MovieRating.Core\obj\Debug\net6.0\ref\MovieRating.Core.dll
