@@ -1,7 +1,9 @@
 import { query } from '@angular/animations';
 import { Component, getNgModuleById, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import { MovieFav } from 'src/models/MovieFavor';
 import { MovieTMDB } from 'src/models/MovieTMDB';
+import { AuthenticationService } from 'src/service/authentication.service';
 import { BackendService } from 'src/service/backend.service';
 
 
@@ -15,11 +17,13 @@ export class ListFilmAndHistoryComponent implements OnInit {
   
 
   moviesTMDB: MovieTMDB | null = null;
-
+  movieFavou: MovieFav | null = null;
   data1: string | null =  null;
   data2: string | null = null;
  
-  constructor(private backendService:BackendService, private route: ActivatedRoute) { }
+  constructor(private backendService:BackendService, private route: ActivatedRoute, public loginService: AuthenticationService) { 
+
+  }
   
 
   ngOnInit(): void {
@@ -31,6 +35,16 @@ export class ListFilmAndHistoryComponent implements OnInit {
       complete: () => console.log(this.data1, this.data2)
     });
 
+  }
+
+  getMovieFavou(){
+    return this.movieFavou;
+  }
+
+
+
+  addMoviefavour(userId: number | null, movieId: number | null){
+    console.log(movieId, userId);
   }
 
   

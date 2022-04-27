@@ -59,7 +59,10 @@
 <body>
     <app-navbar></app-navbar>
     <div class="container-fluid vh-100">
-       <img src="../../assets/cinemaPerHomeComponent.jpg">
+        <div class="botton-play">
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/movie-game" class="nav-link"><button>GIOCA</button></a>
+        </div>
+        
     </div>
     
     <app-footer></app-footer>

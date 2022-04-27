@@ -1,0 +1,10 @@
+{
+    "spring.initializr.defaultArtifactId": "movie_spring_boot",
+    "spring.initializr.defaultGroupId": "com.movies",
+    "spring.initializr.defaultJavaVersion": "11",
+    "spring.initializr.defaultLanguage": "Java",
+    "spring.initializr.defaultPackaging": "WAR",
+    "spring.initializr.serviceUrl": [
+        "https://start.spring.io"
+    ]
+}
