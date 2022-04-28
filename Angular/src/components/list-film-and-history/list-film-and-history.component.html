@@ -7,24 +7,18 @@
             <div class="card-body">
               <h5 class="card-title">{{movie.original_title}}</h5>
 
-              <!--Confronto-->
-              {{getData(movie.id)}}
-              <div *ngIf="notFound; else elseBlock">
-                <button class="btn btn-primary" (click)="addMoviefavour(1,movie.id)"> Salva nei Preferiti</button>
-              </div>
-              <ng-template #elseBlock>
-                <button class="btn btn-primary" style="background-color: rgb(23, 148, 23);"> Salvato </button>
-              </ng-template>
-              <!--<div *ngFor="let movieFavour of movieFavourList">
-                <div *ngIf="movie.id != movieFavour.movie_Id">
-                  <button class="btn btn-primary" (click)="addMoviefavour(1,movie.id)"> Salva nei Preferiti</button>
+              <div *ngFor="let movieFavour of movieFavourList; let i = index">
+                <div *ngIf="movie.id != movieFavour.movie_Id && i+1 == movieFavourList?.length">
+                  <button *ngIf="flag" class="btn btn-primary" (click)="addMoviefavour(1,movie.id)"> Salva nei Preferiti</button>
+                  {{setFalse()}}
                 </div>
                 <div *ngIf="movie.id == movieFavour.movie_Id">
-                  <button class="btn btn-primary" style="background-color: rgb(23, 148, 23);"> Salvato </button>
+                  <button *ngIf="flag" class="btn btn-primary" style="background-color: rgb(23, 148, 23);"> Salvato </button>
+                  {{setFalse()}}
                 </div>
-              </div>-->
-              
-              
+                <div class="counter">{{i+1}}</div>
+              </div>
+              {{setTrue()}}
             </div>
           </div>
     </li>

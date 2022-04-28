@@ -20,7 +20,7 @@ export class ListFilmAndHistoryComponent implements OnInit {
   moviesTMDB: MovieListTMDB | null = null;
   data1: string | null =  null;
   data2: string | null = null;
-  notFound: boolean | null = null;
+  flag: boolean | null = null;
   moviefav: MovieFav | null = null;
  
   constructor(private backendService:BackendService, private route: ActivatedRoute, public loginService: AuthenticationService) { 
@@ -52,11 +52,11 @@ export class ListFilmAndHistoryComponent implements OnInit {
     window.location.href=`http://localhost:4200/addRatingAndComment/${newMovie.movie_Id}`;
   }
 
-  getData(movieId: number){
-    this.notFound=false;
-    this.backendService.getFilmPreferitoByUserIdMovieId(1,movieId).subscribe({
-      error: () => this.notFound=true
-    });
+  setTrue() {
+    this.flag = true
   }
 
+  setFalse() {
+    this.flag = false
+  }
 }
