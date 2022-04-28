@@ -21,7 +21,6 @@ export class ListFilmAndHistoryComponent implements OnInit {
   data1: string | null =  null;
   data2: string | null = null;
   flag: boolean | null = null;
-  listavuota: boolean  = false;
   moviefav: MovieFav | null = null;
  
   constructor(private backendService:BackendService, private route: ActivatedRoute, public loginService: AuthenticationService) { 
@@ -30,10 +29,7 @@ export class ListFilmAndHistoryComponent implements OnInit {
   
 
   ngOnInit(): void {
-    this.backendService.getListaPreferiti().subscribe({
-      next: (res) => this.movieFavourList = res,
-      error: () => this.listavuota=true
-    });
+    this.backendService.getListaPreferiti().subscribe(res => this.movieFavourList = res);
     this.route.params.subscribe((params) => this.data1 = params['date1']);
     this.route.params.subscribe((params) => this.data2 = params['date2']);
     this.backendService.getPopularFilm(this.data1, this.data2).subscribe({
