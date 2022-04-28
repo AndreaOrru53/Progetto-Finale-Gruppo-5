@@ -27,6 +27,63 @@ export const getFavouriteMovieById = async (req, res) => {
         res.sendStatus(500);
     }
 }
+export const getFavouriteMovieByMovieId = async (req, res) => {
+    try {
+        const movie = await FavouriteMovie.findOne({
+            where: {
+                movie_id: req.params.movie_Id
+            }
+        });
+        
+        if (movie) {
+            res.send(movie);
+        } else {
+            res.sendStatus(404);
+        }
+    } catch (err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
+}
+
+export const getFavouriteMovieByUserId = async (req, res) => {
+    try {
+        const movie = await FavouriteMovie.findOne({
+            where: {
+                user_id: req.params.user_Id                
+            }
+        });
+        
+        if (movie) {
+            res.send(movie);
+        } else {
+            res.sendStatus(404);
+        }
+    } catch (err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
+}
+
+export const getFavouriteMovieByUserIdMovieId = async (req, res) => {
+    try {
+        const movie = await FavouriteMovie.findOne({
+            where: {
+                user_id: req.params.user_Id,
+                movie_id: req.params.movie_Id
+            }
+        });
+        
+        if (movie) {
+            res.send(movie);
+        } else {
+            res.sendStatus(404);
+        }
+    } catch (err) {
+        console.log(err);
+        res.sendStatus(500);
+    }
+}
 
 export const createFavouriteMovie = async (req, res) => {
     try {
