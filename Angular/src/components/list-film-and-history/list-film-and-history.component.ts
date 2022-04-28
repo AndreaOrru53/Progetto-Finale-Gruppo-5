@@ -20,7 +20,7 @@ export class ListFilmAndHistoryComponent implements OnInit {
   moviesTMDB: MovieListTMDB | null = null;
   data1: string | null =  null;
   data2: string | null = null;
-  notFound: boolean | null= null;
+  notFound: boolean | null = null;
   moviefav: MovieFav | null = null;
  
   constructor(private backendService:BackendService, private route: ActivatedRoute, public loginService: AuthenticationService) { 
@@ -53,10 +53,9 @@ export class ListFilmAndHistoryComponent implements OnInit {
   }
 
   getData(movieId: number){
-    this.backendService.getFilmPreferito(movieId).subscribe({
-      next: (res) => this.moviefav = res,
-      error: () => console.log("non trovato"),
-      complete: () => console.log(this.moviefav)
+    this.notFound=false;
+    this.backendService.getFilmPreferitoByUserIdMovieId(1,movieId).subscribe({
+      error: () => this.notFound=true
     });
   }
 

@@ -37,7 +37,7 @@ export class BackendService {
   getFilmPreferitoByMovieId(movie_id: number | null){
     return this.httpClient.get<MovieFav>(`http://localhost:5000/favouritemoviebm/${movie_id}`)
   }
-  getFilmPreferitoByMovieIdUserId(movie_id: number | null , user_id: number | null){
+  getFilmPreferitoByUserIdMovieId(user_id: number | null , movie_id: number | null){
     return this.httpClient.get<MovieFav>(`http://localhost:5000/favouritemoviebmu/${user_id}/${movie_id}`)
   }
 
