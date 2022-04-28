@@ -55,6 +55,12 @@ namespace MovieRating.DB.Service
                 MovieRatingEntity commentEntity = _dbService.UpdateById(commentId, MovieRatingMapper.ToCommentEntity(updatedComment));
                 return MovieRatingMapper.ToComment(commentEntity);
             }
+
+            public Comment UpdateCommentByUserIdAndMovieId(int userId, int movieId, Comment updatedComment)
+            {
+                MovieRatingEntity commentEntity = _dbService.UpdateByUserIdMovieId(userId, movieId, MovieRatingMapper.ToCommentEntity(updatedComment));
+                return MovieRatingMapper.ToComment(commentEntity);
+            }
         }
     }
 

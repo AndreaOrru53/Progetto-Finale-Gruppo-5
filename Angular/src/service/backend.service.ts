@@ -54,6 +54,10 @@ export class BackendService {
     return this.httpClient.post(`http://localhost:5299/comments/`, movieComment);
   }
 
+  updateMovieComment(userId: number, movieId: number, movieComment: MovieComment){
+
+  }
+
   //LARAVEL
 
   getAllMovieRating() {

@@ -111,6 +111,29 @@ namespace MovieRating.RestAPI.Controllers
             }
         }
 
+        [HttpPut]
+        [Route("{user-id}/{movie-id}")]
+        public ActionResult<Comment> Update([FromBody] MovieRatingDTO comment, [FromRoute(Name = "user-id")] int userId, [FromRoute(Name = "movie-id")] int movieId)
+        {
+            try
+            {
+                return Ok(_movieRatingService.UpdateCommentByUserIdAndMovieId(userId, movieId, new()
+                {
+                    comment = comment.comment,
+                    user_id = userId,
+                    movie_id = movieId
+                }));
+            }
+            catch (NotFoundCommentByUserIdAndMovieId e)
+            {
+                return NotFound(BuildErrorResponse(e));
+            }
+            catch (ShortComment e)
+            {
+                return BadRequest(BuildErrorResponse(e));
+            }
+        }
+
         [HttpDelete]
         [Route("{comment-id}")]
         public ActionResult Delete([FromRoute(Name = "comment-id")] int commentId)

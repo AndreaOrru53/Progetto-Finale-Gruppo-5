@@ -68,6 +68,18 @@ namespace MovieRating.DB.Service
             return previousComment;
         }
 
+        public MovieRatingEntity UpdateByUserIdMovieId(int userId, int movieId, MovieRatingEntity comment)
+        {
+            var previousComment = FindCommentOrFailUserIdMovieId(userId, movieId);
+
+            previousComment.MovieId = movieId;
+            previousComment.UserId = userId;
+            previousComment.Body = comment.Body;
+            _contextManager.SaveChanges();
+
+            return previousComment;
+        }
+
         private MovieRatingEntity FindCommentOrFail(int id)
         {
             var comment = _contextManager.Comments.FirstOrDefault(x => x.Id == id);
@@ -85,6 +97,17 @@ namespace MovieRating.DB.Service
             if (comment == null)
             {
                 throw new NotFoundUserId(userId);
+            }
+
+            return comment;
+        }
+
+        private MovieRatingEntity FindCommentOrFailUserIdMovieId(int userId, int movieId)
+        {
+           var comment = _contextManager.Comments.FirstOrDefault(x => x.UserId == userId && x.MovieId == movieId);
+            if (comment == null)
+            {
+                throw new NotFoundCommentByUserIdAndMovieId(userId, movieId);
             }
 
             return comment;

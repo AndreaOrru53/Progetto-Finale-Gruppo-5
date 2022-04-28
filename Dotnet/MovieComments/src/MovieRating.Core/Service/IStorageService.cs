@@ -18,6 +18,8 @@ namespace MovieRating.Core.Model
 
         public Comment UpdateCommentById(int commentId, Comment updatedComment);
 
+        public Comment UpdateCommentByUserIdAndMovieId(int userId, int movieId, Comment updatedComment);
+
         public void DeleteCommentById(int commentId);
     }
 }
