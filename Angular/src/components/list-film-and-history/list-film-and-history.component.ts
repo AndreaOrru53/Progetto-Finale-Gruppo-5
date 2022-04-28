@@ -3,8 +3,10 @@ import { Component, getNgModuleById, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { MovieFav } from 'src/models/MovieFavor';
 import { MovieListTMDB } from 'src/models/MovieListTMDB';
+import { MovieRating } from 'src/models/MovieRating';
 import { AuthenticationService } from 'src/service/authentication.service';
 import { BackendService } from 'src/service/backend.service';
+import { MovieRatingComponent } from '../movie-rating/movie-rating.component';
 
 
 @Component({
@@ -18,6 +20,8 @@ export class ListFilmAndHistoryComponent implements OnInit {
   moviesTMDB: MovieListTMDB | null = null;
   data1: string | null =  null;
   data2: string | null = null;
+  notFound: boolean | null= null;
+  moviefav: MovieFav | null = null;
  
   constructor(private backendService:BackendService, private route: ActivatedRoute, public loginService: AuthenticationService) { 
 
@@ -46,6 +50,14 @@ export class ListFilmAndHistoryComponent implements OnInit {
       complete: () => console.log(newMovie)
     });
     window.location.href=`http://localhost:4200/addRatingAndComment/${newMovie.movie_Id}`;
+  }
+
+  getData(movieId: number){
+    this.backendService.getFilmPreferito(movieId).subscribe({
+      next: (res) => this.moviefav = res,
+      error: () => console.log("non trovato"),
+      complete: () => console.log(this.moviefav)
+    });
   }
 
 }

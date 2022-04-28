@@ -8,16 +8,17 @@
               <h5 class="card-title">{{movie.original_title}}</h5>
 
               <!--Confronto-->
-
-              <div *ngFor="let movieFavour of movieFavourList">
+              {{getData(movie.id)}}
+              <!--<div *ngFor="let movieFavour of movieFavourList">
                 <div *ngIf="movie.id != movieFavour.movie_Id">
                   <button class="btn btn-primary" (click)="addMoviefavour(1,movie.id)"> Salva nei Preferiti</button>
                 </div>
                 <div *ngIf="movie.id == movieFavour.movie_Id">
                   <button class="btn btn-primary" style="background-color: rgb(23, 148, 23);"> Salvato </button>
                 </div>
-              </div>
-
+              </div>-->
+              
+              <button class="btn btn-primary" (click)="addMoviefavour(1,movie.id)"> Salva nei Preferiti</button>
             </div>
           </div>
     </li>
