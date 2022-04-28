@@ -13,10 +13,12 @@ export class AddRatingAndCommentComponent implements OnInit {
 
   movieId!: number;
   movieTMDB: MovieTMDB | null = null;
+  date1: string | null = null;
+  date2: string | null = null;
 
   constructor(private backendService:BackendService, private route: ActivatedRoute, public loginService: AuthenticationService ) { }
 
-
+  
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => this.movieId = params['movieId']);
@@ -25,6 +27,13 @@ export class AddRatingAndCommentComponent implements OnInit {
       error: () => console.log('Error!'),
       complete: () => console.log(this.movieTMDB)
     });
+  }
+
+  goBack(){
+    this.route.params.subscribe((params) => this.date1 = params['date1']);
+    this.route.params.subscribe((params) => this.date2 = params['date2']);
+    console.log(this.date1, this.date2);
+    window.location.href=`http://localhost:4200/listFilm-listHistory/${this.date1}/${this.date2}`;
   }
 
 }

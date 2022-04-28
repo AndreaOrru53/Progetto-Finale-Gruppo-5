@@ -49,7 +49,7 @@ export class ListFilmAndHistoryComponent implements OnInit {
       error: () => console.log('Error!'),
       complete: () => console.log(newMovie)
     });
-    window.location.href=`http://localhost:4200/addRatingAndComment/${newMovie.movie_Id}`;
+    window.location.href=`http://localhost:4200/addRatingAndComment/${newMovie.movie_Id}/${this.data1}/${this.data2}`;
   }
 
   setTrue() {

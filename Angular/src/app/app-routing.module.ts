@@ -32,7 +32,7 @@ const routes: Routes = [
   { path: 'movie-game', component : GameComponent},
   { path: 'listFilm-listHistory/:date1/:date2', component : ListFilmAndHistoryComponent},
   { path: 'listFavouMovie', component : ListFavouMovieComponent},
-  {path: 'addRatingAndComment/:movieId', component : AddRatingAndCommentComponent},
+  {path: 'addRatingAndComment/:movieId/:date1/:date2', component : AddRatingAndCommentComponent},
 
   { path : '', redirectTo: '/home', pathMatch: 'full'}
 ];
