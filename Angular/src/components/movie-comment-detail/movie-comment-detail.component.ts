@@ -10,29 +10,22 @@ import { BackendService } from 'src/service/backend.service';
 })
 export class MovieCommentDetailComponent implements OnInit {
 
-  movieCommentId: number | null = null;
-  notFound: boolean = false;
   movieComment: MovieComment | null = null;
 
   constructor( 
-    activatedRoute: ActivatedRoute,
-    private router: Router,
     private backendAPIService:BackendService ) { 
-
-      activatedRoute.params.subscribe(val => {
-        this.movieCommentId = +val['movieCommentId'];
-      });
 
     }
 
   ngOnInit(): void {
-    this.getData();
+    
   }
 
-  getData(){
-    this.backendAPIService.getMovieCommentById(this.movieCommentId).subscribe({
+  updated(){
+    this.backendAPIService.UpdateCommentByUserIdMovieId(1, 20982, " bellissssssimo").subscribe({
       next: (res) => this.movieComment = res,
-      error: (err) => this.notFound = true
+      error: (res) => console.log("not updated"),
+      complete:() => console.log(this.movieComment)
     });
   }
 

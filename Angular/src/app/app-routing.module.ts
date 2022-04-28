@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'logout', component: LogoutComponent, canActivate:[AuthGuardService] },  
   { path: 'home', component : HomeComponent},
   { path: 'movie-comment', component : MovieCommentComponent},
-  { path: 'movie-comment/:movieCommentId', component : MovieCommentDetailComponent},
+  { path: 'movie-comment-detail', component : MovieCommentDetailComponent},
   { path: 'add-movie-comment', component : AddMovieCommentComponent},
   { path: 'movie-rating', component : MovieRatingComponent},
   { path: 'movies/:movieId', component : MoviesDetailComponent},

@@ -54,9 +54,15 @@ export class BackendService {
     return this.httpClient.post(`http://localhost:5299/comments/`, movieComment);
   }
 
-  updateMovieComment(userId: number, movieId: number, movieComment: MovieComment){
-
+  UpdateCommentByUserIdMovieId(userId: number, movieId: number, comment: string){
+  const url = `http://localhost:5299/comments/${userId}/${movieId}`;
+    const body = {
+       comment
+    }
+    return this.httpClient.put<MovieComment>(url, body);
   }
+
+  
 
   //LARAVEL
 
