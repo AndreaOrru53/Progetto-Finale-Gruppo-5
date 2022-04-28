@@ -1,4 +1,5 @@
 import { HttpClient } from '@angular/common/http';
+import { NonNullAssert } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MovieComment } from 'src/models/MovieComment';
@@ -29,6 +30,15 @@ export class BackendService {
   }
   deleteFilmPreferito(movie_id: number | null){
     return this.httpClient.delete<MovieFav>(`http://localhost:5000/favouritemovie/${movie_id}`);
+  }
+  getFilmPreferitoByUserId(user_id: number | null){
+    return this.httpClient.get<MovieFav>(`http://localhost:5000/favouritemoviebu/${user_id}`)
+  }
+  getFilmPreferitoByMovieId(movie_id: number | null){
+    return this.httpClient.get<MovieFav>(`http://localhost:5000/favouritemoviebm/${movie_id}`)
+  }
+  getFilmPreferitoByMovieIdUserId(movie_id: number | null , user_id: number | null){
+    return this.httpClient.get<MovieFav>(`http://localhost:5000/favouritemoviebmu/${user_id}/${movie_id}`)
   }
 
   //DOTNET
