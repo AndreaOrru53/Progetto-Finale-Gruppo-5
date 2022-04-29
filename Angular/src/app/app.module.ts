@@ -10,7 +10,7 @@ import { HomeComponent } from '../components/home/home.component';
 import { ListFilmAndHistoryComponent } from '../components/list-film-and-history/list-film-and-history.component';
 import { LoginComponent } from '../components/login/login.component';
 import { LogoutComponent } from '../components/logout/logout.component';
-import { MovieCommentDetailComponent } from '../components/movie-comment-detail/movie-comment-detail.component';
+import { MovieCommentDetailComponent } from '../components/prova/movie-comment-detail.component';
 import { MovieCommentComponent } from '../components/movie-comment/movie-comment.component';
 import { MovieRatingComponent } from '../components/movie-rating/movie-rating.component';
 import { MoviesDetailComponent } from '../components/movies-detail/movies-detail.component';

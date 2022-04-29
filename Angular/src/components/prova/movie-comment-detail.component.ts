@@ -10,10 +10,7 @@ import { BackendService } from 'src/service/backend.service';
 })
 export class MovieCommentDetailComponent implements OnInit {
 
-  moviesComment: MovieComment |null = null;
-  comment: string | null = null;
-
-  @Input() movieId!: number;
+  movieComment: MovieComment | null = null;
 
   constructor( 
     private backendAPIService:BackendService ) { 
@@ -21,15 +18,16 @@ export class MovieCommentDetailComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    
+    this.backendAPIService.deleteCommentByUserIdMovieId(1, 294793).subscribe({
+      next: (val) => {
+        this.movieComment = val,
+        console.log("Dalated")
+      },
+      error: (val) => console.log("Not dalated", val)
+    })
   }
 
-  updated(){
-    this.backendAPIService.getMovieCommentByUserIdMovieId(1, this.movieId).subscribe({
-    next: (res) => this.comment=res.comment
-    
-    }) 
-  }
+  
   
 
 }

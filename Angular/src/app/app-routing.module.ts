@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddMovieCommentComponent } from 'src/components/add-movie-comment/add-movie-comment.component';
 import { GameComponent } from 'src/components/game/game.component';
 import { ListFilmAndHistoryComponent } from 'src/components/list-film-and-history/list-film-and-history.component';
-import { MovieCommentDetailComponent } from 'src/components/movie-comment-detail/movie-comment-detail.component';
+import { MovieCommentDetailComponent } from 'src/components/prova/movie-comment-detail.component';
 import { MovieCommentComponent } from 'src/components/movie-comment/movie-comment.component';
 import { MovieRatingComponent } from 'src/components/movie-rating/movie-rating.component';
 import { MoviesDetailComponent } from 'src/components/movies-detail/movies-detail.component';
