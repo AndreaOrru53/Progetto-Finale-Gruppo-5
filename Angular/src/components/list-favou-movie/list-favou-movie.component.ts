@@ -15,7 +15,7 @@ export class ListFavouMovieComponent implements OnInit {
 
   moviesFavou: MovieFav [] = [];
   moviesTMDB: MovieTMDB []= [];
-  moviesRating: number [] = [];
+  moviesRating: MovieRating [] = [];
   movieComments: MovieComment [] = [];
   
   constructor(private backendService:BackendService,  public loginService: AuthenticationService) { }

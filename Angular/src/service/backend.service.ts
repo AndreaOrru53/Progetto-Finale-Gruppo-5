@@ -83,7 +83,7 @@ export class BackendService {
   }
 
   getMovieRatingsByUserIdAndMovieId(user_id: number, movie_id: number) {
-    return this.httpClient.get<number>(`http://localhost:8000/api/ratings/user/and/movie/id/${user_id}/${movie_id}`)
+    return this.httpClient.get<MovieRating>(`http://localhost:8000/api/ratings/user/and/movie/id/${user_id}/${movie_id}`)
   }
 
   createMovieRating(movie_rating: MovieRating) {
