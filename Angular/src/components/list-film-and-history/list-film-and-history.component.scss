@@ -16,6 +16,7 @@ li{
 
 .card {
     margin: 0;
+    height: 400px;
 }
 
 ul{
@@ -25,3 +26,20 @@ ul{
 .counter {
     display: none;
 }
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    position: absolute;
+    text-align: left;
+}
+
+button {
+    position: absolute;
+    margin: 65% -47% 0 ;
+}
+
+
+
