@@ -1,15 +1,8 @@
 <app-navbar></app-navbar>
 
-    <h1>Lista Film Preferiti</h1>
-
-<div *ngFor="let movie of moviesFavou, let i = index; i + 1">
-  <div *ngIf="i < moviesFavou.length">
-    {{getMovieTMDB(movie.movie_Id, i)}}
-  </div>
-</div>
-
-    <ul *ngIf="loginService.isUserLoggedIn()">
-        <li *ngFor="let movie of movieTMDB">
+<h1>Lista Film Preferiti</h1>
+    <ul >
+        <li *ngFor="let movie of moviesTMDB"  >
             <div class="card" style="width: 10rem;">  
                 <img src="https://image.tmdb.org/t/p/w300{{movie?.poster_path}}" class="card-img-top" alt={{movie?.title}}>
                 <div class="card-body">

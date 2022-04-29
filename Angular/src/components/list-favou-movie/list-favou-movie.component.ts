@@ -14,24 +14,27 @@ import { BackendService } from 'src/service/backend.service';
 export class ListFavouMovieComponent implements OnInit {
 
   moviesFavou: MovieFav [] = [];
-  movieTMDB: MovieTMDB[] = [];
+  moviesTMDB: MovieTMDB []= [];
   movieComments: MovieComment [] = [];
   
   constructor(private backendService:BackendService,  public loginService: AuthenticationService) { }
 
   ngOnInit(): void {
     this.backendService.getFilmPreferitiByUserId(1).subscribe({
-      next: (res) => this.moviesFavou = res,
-      error: () => console.log('Error!'),
+      next: (res) => {
+        this.moviesFavou = res;
+        for (let i = 0; i < this.moviesFavou.length; i++) {
+          let id = this.moviesFavou[i].movie_Id;
+          this.backendService.getMovieById(id).subscribe({
+            next: (val) => this.moviesTMDB[i] = val
+          })
+        }
+      }
+      
     });
-    console.log(this.movieTMDB, this.moviesFavou)
   }
 
-  getMovieTMDB(movie_Id: number, i: number) {
-    this.backendService.getMovieById(movie_Id).subscribe({
-      next: (res) => this.movieTMDB[i] = res,
-      error: () => console.log('Error!'),
-    });
-  }
+  
+
 
 }
