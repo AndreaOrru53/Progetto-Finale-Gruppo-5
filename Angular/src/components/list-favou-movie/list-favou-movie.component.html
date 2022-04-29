@@ -2,14 +2,18 @@
 
 <h1>Lista Film Preferiti</h1>
     <ul >
-        <li *ngFor="let movie of moviesTMDB"  >
-            <div class="card" style="width: 10rem;">  
+        <li *ngFor="let movie of moviesTMDB; let i = index">
+            <div class="card" style="width: 25rem;">  
                 <img src="https://image.tmdb.org/t/p/w300{{movie?.poster_path}}" class="card-img-top" alt={{movie?.title}}>
                 <div class="card-body">
                   <h5 class="card-title">{{movie?.original_title}}</h5>
+                  {{moviesRating[i]}}
                 </div>
               </div>
         </li>
     </ul>
+    
 <app-footer></app-footer>
+
+
 

@@ -193,15 +193,12 @@ class RatingController extends Controller
     {
     
         return response()->Json(
-            [
+            
                 DB::table('ratings')->
                 select('movie_rating')->
                 where('user_id', '=', $user_id)->
                 where('movie_id', '=', $movie_id)->
-                get(),
-
-                'Response Status' => Response::HTTP_OK
-            ]
+                get(),            
         );
     }
 }

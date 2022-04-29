@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieComment } from 'src/models/MovieComment';
 import { MovieFav } from 'src/models/MovieFavor';
-import { MovieListTMDB } from 'src/models/MovieListTMDB';
+import { MovieRating } from 'src/models/MovieRating';
 import { MovieTMDB } from 'src/models/MovieTMDB';
 import { AuthenticationService } from 'src/service/authentication.service';
 import { BackendService } from 'src/service/backend.service';
@@ -15,6 +15,7 @@ export class ListFavouMovieComponent implements OnInit {
 
   moviesFavou: MovieFav [] = [];
   moviesTMDB: MovieTMDB []= [];
+  moviesRating: number [] = [];
   movieComments: MovieComment [] = [];
   
   constructor(private backendService:BackendService,  public loginService: AuthenticationService) { }
@@ -28,11 +29,16 @@ export class ListFavouMovieComponent implements OnInit {
           this.backendService.getMovieById(id).subscribe({
             next: (val) => this.moviesTMDB[i] = val
           })
+          this.backendService.getMovieRatingsByUserIdAndMovieId(1, id).subscribe({
+            next: (val) => this.moviesRating[i] = val,
+            error: () => console.log()
+          })
         }
-      }
-      
+      }     
     });
   }
+
+ 
 
   
 
