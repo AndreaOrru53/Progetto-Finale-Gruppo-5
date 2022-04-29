@@ -62,6 +62,14 @@ namespace MovieRating.DB.Service
             return comment;
         }
 
+         public MovieRatingEntity DeleteByUserIdMovieId(int userId, int movieId)
+        {
+            var comment = FindCommentOrFailUserIdMovieId(userId, movieId);
+            _contextManager.Comments.Remove(comment);
+            _contextManager.SaveChanges();
+            return comment;
+        }
+
         public MovieRatingEntity UpdateById(int id, MovieRatingEntity comment)
         {
             var previousComment = FindCommentOrFail(id);

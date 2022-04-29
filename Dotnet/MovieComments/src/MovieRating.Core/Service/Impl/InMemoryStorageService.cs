@@ -43,6 +43,12 @@ namespace MovieRating.Core.Service.Impl
             _comments.Remove(commentToDelete);
         }
 
+        public void DeleteCommentByUserIdMovieId(int userId, int movieId)
+        {
+            Comment commentToDelete = FindCommentOrFailUserIdMovieId(userId, userId);
+            _comments.Remove(commentToDelete);
+        }
+
         public List<Comment> GetAllComments()
         {
             return _comments;

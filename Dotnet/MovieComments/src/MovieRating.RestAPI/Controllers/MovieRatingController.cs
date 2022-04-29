@@ -163,6 +163,21 @@ namespace MovieRating.RestAPI.Controllers
             }
         }
 
+        [HttpDelete]
+        [Route("{user-id}/{movie-id}")]
+        public ActionResult DeletebyUserIdAndMovieId([FromRoute(Name = "user-id")] int userId, [FromRoute(Name = "movie-id")] int movieId)
+        {
+            try
+            {
+                _movieRatingService.DeleteCommentByUserIdMovieId(userId, movieId);
+                return NoContent();
+            }
+            catch (NotFoundCommentByUserIdAndMovieId e)
+            {
+                return NotFound(BuildErrorResponse(e));
+            }
+        }
+
         private static Error BuildErrorResponse(Exception e) => new()
         {
             Message = e.Message,
