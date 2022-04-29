@@ -38,6 +38,7 @@
         .footer {
             height: 10vh;
             background-color: #FAEBD7;
+            
         }
 
         @media (max-width: 768px) {
@@ -52,7 +53,7 @@
     <app-navbar></app-navbar>
     <div class="container-fluid vh-100">
         <div class="botton-play">
-            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/movie-game" class="nav-link"><button>GIOCA</button></a>
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/movie-game" class="nav-link"><button class="btn btn-primary">GIOCA</button></a>
         </div>
         
     </div>
