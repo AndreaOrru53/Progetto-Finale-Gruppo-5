@@ -32,7 +32,7 @@ export class BackendService {
     return this.httpClient.delete<MovieFav>(`http://localhost:5000/favouritemovie/${movie_id}`);
   }
   getFilmPreferitoByUserId(user_id: number | null){
-    return this.httpClient.get<MovieFav>(`http://localhost:5000/favouritemoviebu/${user_id}`)
+    return this.httpClient.get<MovieFav[]>(`http://localhost:5000/favouritemoviebu/${user_id}`)
   }
   getFilmPreferitoByMovieId(movie_id: number | null){
     return this.httpClient.get<MovieFav>(`http://localhost:5000/favouritemoviebm/${movie_id}`)
@@ -90,7 +90,7 @@ export class BackendService {
     const url = `http://localhost:8000/api/ratings/`;
     return this.httpClient.post(url, movie_rating)
   }
-  
+
   updateMovieRating(movie_rating: number, movie_id:number, user_id: number) {
     const url = `http://localhost:8000/api/ratings`;
     const body = {

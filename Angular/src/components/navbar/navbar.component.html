@@ -4,7 +4,7 @@
         <img src="../../assets/favicon.png" alt="" width="30" height="28" class="d-inline-block align-text-top">
         Film&History
         </a>
-        <a *ngIf="loginService.isUserLoggedIn()"  routerLink="/" class="nav-link">Vedi tutti gli Utenti</a>
+        <a *ngIf="loginService.isUserLoggedIn()"  routerLink="/listFavouMovie" class="nav-link">Lista Miei Film preferiti</a>
         <a  *ngIf="loginService.isUserLoggedIn()" routerLink="/addCustomers" class="nav-link">Aggiungi Utente</a>
         <a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">LogOut</a>
         

@@ -1,22 +1,19 @@
 <app-navbar></app-navbar>
-    <h1>Lista Film Preferiti</h1>
-    <div *ngIf="loginService.isUserLoggedIn()">
-        <ul >
-            <li *ngFor="let movie of moviesFavou | slice:0:10;">
-                {{movie.movie_Id}}, {{movie.user_Id}}
-            </li>
-        </ul>
-
-
-        <h1>Commenti di un Utente</h1>
     
-        <ul >
-            <li *ngFor="let comment of movieComments">
-                {{comment.user_id}}
-                {{comment.movie_id}}
-                {{comment.comment}}
-            </li>
-        </ul>
-    </div>
+
+
+
+    <h1>Lista Film Preferiti</h1>
+
+    <ul *ngIf="loginService.isUserLoggedIn()">
+        <li *ngFor="let movie of moviesFavou">
+            <div   class="card" style="width: 10rem;">     
+                <img src="https://image.tmdb.org/t/p/w300{{movieTMDB?.poster_path}}" class="card-img-top" alt={{movieTMDB?.title}}>
+                <div class="card-body">
+                  <h5 class="card-title">{{movieTMDB?.original_title}}</h5>
+                </div>
+              </div>
+        </li>
+    </ul>
 <app-footer></app-footer>
 

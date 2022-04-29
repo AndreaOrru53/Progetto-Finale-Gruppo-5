@@ -3,7 +3,6 @@
     <li *ngFor="let movie of moviesTMDB?.results | slice:0:10;">
         <div class="card" style="width: 10rem;">
             <img src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}" class="card-img-top" alt={{movie.title}}>
-            <h1>{{movie.id}}</h1>
             <div class="card-body">
               <h5 class="card-title">{{movie.original_title}}</h5>
               
