@@ -4,6 +4,7 @@
     padding:0;
     background-size: 100%;
     background-repeat: no-repeat;
+    position: fixed;
 }
 
 .container-fluid img {
@@ -16,5 +17,47 @@
 }
 
 .botton-play{
-    padding:250px 600px;
+    padding:23px 50px 60px;
+}
+.scrt{
+    margin-top: 60px;
+    color: #FAEBD7;
+}
+
+.header {
+    height: 13vh;
+    background-color: #296aa3;
+}
+
+.main {
+    height: 80vh;
+}
+
+.sidebar {
+    background-color: #19b3d5;
+}
+
+.sidebar .list-group-item {
+    border: 1px solid rgba(0, 0, 0, .125) !important;
+    background-color: #296aa3;
+}
+
+.content {
+    background-color: #296aa3;
+}
+
+.content .card {
+    background-color: #19b3d5;
+}
+
+.footer {
+    height: 8vh;
+    background-color: #FAEBD7;
+    
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        height: 20vh !important;
+    }
 }

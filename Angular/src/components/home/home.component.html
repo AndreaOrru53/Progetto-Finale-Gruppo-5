@@ -8,50 +8,15 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
     crossorigin="anonymous">
 
-    <style>
-        .header {
-            height: 13vh;
-            background-color: #296aa3;
-        }
-
-        .main {
-            height: 80vh;
-        }
-
-        .sidebar {
-            background-color: #19b3d5;
-        }
-
-        .sidebar .list-group-item {
-            border: 1px solid rgba(0, 0, 0, .125) !important;
-            background-color: #296aa3;
-        }
-
-        .content {
-            background-color: #296aa3;
-        }
-
-        .content .card {
-            background-color: #19b3d5;
-        }
-
-        .footer {
-            height: 10vh;
-            background-color: #FAEBD7;
-            
-        }
-
-        @media (max-width: 768px) {
-            .sidebar {
-                height: 20vh !important;
-            }
-        }
-    </style>
+    
 </head>
 
 <body>
     <app-navbar></app-navbar>
+
+    
     <div class="container-fluid vh-100">
+        <h2 class="scrt">Cerca i film che ti piaccionon di piu' o che non ancora conosci filtrando per data di uscita e salvali nei tuoi preferiti!</h2>
         <div class="botton-play">
             <a *ngIf="loginService.isUserLoggedIn()" routerLink="/movie-game" class="nav-link"><button class="btn btn-primary">GIOCA</button></a>
         </div>
