@@ -9,7 +9,7 @@
                 <button *ngIf="!isFavourite(movie.id)" class="btn btn-primary" (click)="addMoviefavour(1,movie.id)"> Salva nei Preferiti</button>
               
                
-                  <button *ngIf="isFavourite(movie.id)" class="btn btn-primary" style="background-color: rgb(23, 148, 23);"> Nei Tuoi Preferiti </button>
+                <a href="http://localhost:4200/listFavouMovie"><button *ngIf="isFavourite(movie.id)" class="btn btn-primary" style="background-color: rgb(23, 148, 23);"> Nei Tuoi Preferiti </button></a>
                
             </div>
           </div>

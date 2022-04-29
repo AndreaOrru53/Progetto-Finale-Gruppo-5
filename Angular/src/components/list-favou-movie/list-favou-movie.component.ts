@@ -17,7 +17,7 @@ export class ListFavouMovieComponent implements OnInit {
   moviesTMDB: MovieTMDB []= [];
   moviesRating: MovieRating [] = [];
   movieComments: MovieComment [] = [];
-  listaVuota: boolean | null = null;
+  listaVuota: boolean = true;
   
   constructor(private backendService:BackendService,  public loginService: AuthenticationService) { }
 
@@ -43,11 +43,14 @@ export class ListFavouMovieComponent implements OnInit {
             error: (val) => this.movieComments[i] = val
           })
         }
-      },
-
-      error: () => this.listaVuota = true
+      }
          
     });
+  }
+
+
+  deleteMoviefavour(userid: number, movieId: number){
+    
   }
 
  
