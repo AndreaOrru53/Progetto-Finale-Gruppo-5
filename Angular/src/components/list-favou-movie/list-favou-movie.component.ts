@@ -17,14 +17,12 @@ export class ListFavouMovieComponent implements OnInit {
   moviesTMDB: MovieTMDB []= [];
   moviesRating: MovieRating [] = [];
   movieComments: MovieComment [] = [];
-  listaVuota: boolean = true;
-  
+
   constructor(private backendService:BackendService,  public loginService: AuthenticationService) { }
 
   ngOnInit(): void {
     this.backendService.getFilmPreferitiByUserId(1).subscribe({
       next: (res) => {
-        this.listaVuota = false;
         this.moviesFavou = res;
         for (let i = 0; i < this.moviesFavou.length; i++) {
           let id = this.moviesFavou[i].movie_Id;
@@ -46,6 +44,10 @@ export class ListFavouMovieComponent implements OnInit {
       }
          
     });
+  }
+
+  isListaVuota(){
+   return this.moviesFavou;
   }
 
 

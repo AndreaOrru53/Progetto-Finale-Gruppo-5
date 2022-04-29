@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<div *ngIf="!listaVuota">
+<div *ngIf="isListaVuota()">
   <h1>Lista Film Preferiti</h1>
   <ul >
       <li *ngFor="let movie of moviesTMDB; let i = index">
@@ -20,7 +20,7 @@
       </li>
   </ul>
 </div>
-<div *ngIf="listaVuota">
+<div *ngIf="!isListaVuota()">
 
   <h1 class="no-list">NON HAI NESSUN FILM NELLA TUA LISTA</h1>
 
