@@ -31,7 +31,7 @@ export class BackendService {
   deleteFilmPreferito(movie_id: number | null){
     return this.httpClient.delete<MovieFav>(`http://localhost:5000/favouritemovie/${movie_id}`);
   }
-  getFilmPreferitoByUserId(user_id: number | null){
+  getFilmPreferitiByUserId(user_id: number | null){
     return this.httpClient.get<MovieFav[]>(`http://localhost:5000/favouritemoviebu/${user_id}`)
   }
   getFilmPreferitoByMovieId(movie_id: number | null){

@@ -48,7 +48,7 @@ export const getFavouriteMovieByMovieId = async (req, res) => {
 
 export const getFavouriteMovieByUserId = async (req, res) => {
     try {
-        const movie = await FavouriteMovie.findOne({
+        const movie = await FavouriteMovie.findAll({
             where: {
                 user_id: req.params.user_Id                
             }
