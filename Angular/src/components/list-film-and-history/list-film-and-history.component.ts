@@ -59,4 +59,9 @@ export class ListFilmAndHistoryComponent implements OnInit {
   setFalse() {
     this.flag = false
   }
+
+  isFavourite(movieId: number){
+    console.log(this.movieFavourList)
+    return this.movieFavourList?.find(x => x.movie_Id == movieId)
+  }
 }

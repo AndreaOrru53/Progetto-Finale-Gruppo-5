@@ -6,12 +6,13 @@
             <div class="card-body">
               <h5 class="card-title">{{movie.original_title}}</h5>
               
+                <button *ngIf="!isFavourite(movie.id)" class="btn btn-primary" (click)="addMoviefavour(1,movie.id)"> Salva nei Preferiti</button>
               
-                <button *ngIf="flag" class="btn btn-primary" (click)="addMoviefavour(1,movie.id)"> Salva nei Preferiti</button>
+                <div *ngIf="isFavourite(movie.id)">
+                  <button class="btn btn-primary" style="background-color: rgb(23, 148, 23);"> Nei Tuoi Preferiti </button>
+                </div>
               
-              
-              
-                <div *ngFor="let movieFavour of movieFavourList; let i = index">
+                <!--<div *ngFor="let movieFavour of movieFavourList; let i = index">
                   <div *ngIf="movie.id != movieFavour.movie_Id && i+1 == movieFavourList?.length">
                     <button *ngIf="flag" class="btn btn-primary" (click)="addMoviefavour(1,movie.id)"> Salva nei Preferiti</button>
                     {{setFalse()}}
@@ -22,8 +23,10 @@
                   </div>
                   <div class="counter">{{i+1}}</div>
                 </div>
-                {{setTrue()}}
+                {{setTrue()}}-->
              
+
+                
               
             </div>
           </div>
