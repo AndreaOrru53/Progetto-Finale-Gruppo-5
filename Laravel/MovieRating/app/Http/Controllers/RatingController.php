@@ -197,7 +197,7 @@ class RatingController extends Controller
             select('movie_id', 'movie_rating', 'user_id')->
             where('user_id', '=', $user_id)->
             where('movie_id', '=', $movie_id)->
-            get()->first()        
+            get()->first()       
         );
     }
 }

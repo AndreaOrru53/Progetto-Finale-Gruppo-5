@@ -53,6 +53,13 @@ namespace MovieRating.Core.Service.Impl
             return FindCommentOrFail(commentId);
         }
 
+        public Comment  GetByUserIdMovieId(int userId, int movieId)
+        {
+            return FindCommentOrFailUserIdMovieId(userId, movieId);
+        }
+
+       
+
         public Comment UpdateCommentById(int commentId, Comment updatedComment)
         {
             Comment commentToUpdate = FindCommentOrFail(commentId);

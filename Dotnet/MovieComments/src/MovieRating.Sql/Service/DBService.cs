@@ -30,6 +30,12 @@ namespace MovieRating.DB.Service
             return comment;
         }
 
+        public MovieRatingEntity GetByUserIdMovieId(int userId, int movieId)
+        {
+            var comment = FindCommentOrFailUserIdMovieId(userId, movieId);
+            return comment;
+        }
+
         public List<MovieRatingEntity> GetByUserId(int userId) {
             
             var comment = FindUserIdOrFail(userId);

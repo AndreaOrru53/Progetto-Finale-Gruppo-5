@@ -53,6 +53,20 @@ namespace MovieRating.RestAPI.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("{user-id}/{movie-id}")]
+        public ActionResult<Comment> GetByUserIdMovieId([FromRoute(Name = "user-id")] int userId, [FromRoute(Name = "movie-id")] int movieId )
+        {
+            try
+            {
+                return Ok(_movieRatingService.GetCommentByUserIdMovieId(userId, movieId));
+            }
+            catch (NotFoundCommentByUserIdAndMovieId e)
+            {
+                return NotFound(BuildErrorResponse(e));
+            }
+        }
+
         [HttpPost]
         public ActionResult<Comment> Add([FromBody] MovieRatingDTO comment)
         {

@@ -9,7 +9,7 @@ import { BackendService } from 'src/service/backend.service';
 })
 export class MovieCommentComponent implements OnInit {
 
-  comments: MovieComment[] = [];
+  comment: MovieComment | null = null;
 
   id1: number = 1;
 
@@ -18,13 +18,16 @@ export class MovieCommentComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.backendService.getAllMovieComment().subscribe({
-      next: (res) => this.comments = res,
+    
+    this.backendService.getMovieCommentByUserIdMovieId(1, 338953).subscribe({
+      next: (res) => this.comment = res,
       error: () => console.log('Error!'),
-      complete: () => console.log('Complete')
-    });
+      complete: () => console.log(this.comment)
+  });
+}
+
   }
 
 
 
-}
+

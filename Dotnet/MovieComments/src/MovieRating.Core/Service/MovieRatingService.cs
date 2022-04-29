@@ -30,6 +30,8 @@ namespace MovieRating.Core.Service
 
         public Comment GetCommentById(int id) => _storageService.GetCommentById(id);
 
+        public Comment GetCommentByUserIdMovieId(int userId, int movieId) => _storageService.GetByUserIdMovieId(userId, movieId);
+
         public Comment UpdateCommentById(int id, Comment updatedComment)
         {
             ValidateCommentOrFail(updatedComment, id);

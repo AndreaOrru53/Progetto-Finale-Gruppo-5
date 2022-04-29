@@ -17,24 +17,36 @@ export class ListFavouMovieComponent implements OnInit {
   moviesTMDB: MovieTMDB []= [];
   moviesRating: MovieRating [] = [];
   movieComments: MovieComment [] = [];
+  listaVuota: boolean | null = null;
   
   constructor(private backendService:BackendService,  public loginService: AuthenticationService) { }
 
   ngOnInit(): void {
     this.backendService.getFilmPreferitiByUserId(1).subscribe({
       next: (res) => {
+        this.listaVuota = false;
         this.moviesFavou = res;
         for (let i = 0; i < this.moviesFavou.length; i++) {
           let id = this.moviesFavou[i].movie_Id;
+         
           this.backendService.getMovieById(id).subscribe({
             next: (val) => this.moviesTMDB[i] = val
           })
+
           this.backendService.getMovieRatingsByUserIdAndMovieId(1, id).subscribe({
             next: (val) => this.moviesRating[i] = val,
-            error: () => console.log()
+            error: () => console.log(this.moviesRating)
+          })
+
+          this.backendService.getMovieCommentByUserIdMovieId(1, id).subscribe({
+            next: (val) => this.movieComments[i] = val,
+            error: (val) => this.movieComments[i] = val
           })
         }
-      }     
+      },
+
+      error: () => this.listaVuota = true
+         
     });
   }
 

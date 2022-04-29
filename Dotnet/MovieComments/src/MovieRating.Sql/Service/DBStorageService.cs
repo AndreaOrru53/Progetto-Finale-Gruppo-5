@@ -49,6 +49,9 @@ namespace MovieRating.DB.Service
             public Comment GetCommentById(int commentId) =>
                 MovieRatingMapper.ToComment(_dbService.GetById(commentId));
 
+                public Comment GetByUserIdMovieId(int userId, int movieId) =>
+                MovieRatingMapper.ToComment(_dbService.GetByUserIdMovieId(userId, movieId));
+
 
             public Comment UpdateCommentById(int commentId, Comment updatedComment)
             {

@@ -8,26 +8,9 @@
               
                 <button *ngIf="!isFavourite(movie.id)" class="btn btn-primary" (click)="addMoviefavour(1,movie.id)"> Salva nei Preferiti</button>
               
-                <div *ngIf="isFavourite(movie.id)">
-                  <button class="btn btn-primary" style="background-color: rgb(23, 148, 23);"> Nei Tuoi Preferiti </button>
-                </div>
-              
-                <!--<div *ngFor="let movieFavour of movieFavourList; let i = index">
-                  <div *ngIf="movie.id != movieFavour.movie_Id && i+1 == movieFavourList?.length">
-                    <button *ngIf="flag" class="btn btn-primary" (click)="addMoviefavour(1,movie.id)"> Salva nei Preferiti</button>
-                    {{setFalse()}}
-                  </div>
-                  <div *ngIf="movie.id == movieFavour.movie_Id">
-                    <button *ngIf="flag" class="btn btn-primary" style="background-color: rgb(23, 148, 23);"> Nei Tuoi Preferiti </button>
-                    {{setFalse()}}
-                  </div>
-                  <div class="counter">{{i+1}}</div>
-                </div>
-                {{setTrue()}}-->
-             
-
-                
-              
+               
+                  <button *ngIf="isFavourite(movie.id)" class="btn btn-primary" style="background-color: rgb(23, 148, 23);"> Nei Tuoi Preferiti </button>
+               
             </div>
           </div>
     </li>

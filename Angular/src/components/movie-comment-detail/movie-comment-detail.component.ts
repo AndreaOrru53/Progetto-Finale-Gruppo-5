@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MovieComment } from 'src/models/MovieComment';
 import { BackendService } from 'src/service/backend.service';
@@ -10,7 +10,10 @@ import { BackendService } from 'src/service/backend.service';
 })
 export class MovieCommentDetailComponent implements OnInit {
 
-  movieComment: MovieComment | null = null;
+  moviesComment: MovieComment |null = null;
+  comment: string | null = null;
+
+  @Input() movieId!: number;
 
   constructor( 
     private backendAPIService:BackendService ) { 
@@ -22,11 +25,11 @@ export class MovieCommentDetailComponent implements OnInit {
   }
 
   updated(){
-    this.backendAPIService.UpdateCommentByUserIdMovieId(1, 20982, "okay okay okay").subscribe({
-      next: (res) => this.movieComment = res,
-      error: (res) => console.log("not updated"),
-      complete:() => console.log(this.movieComment)
-    });
+    this.backendAPIService.getMovieCommentByUserIdMovieId(1, this.movieId).subscribe({
+    next: (res) => this.comment=res.comment
+    
+    }) 
   }
+  
 
 }
