@@ -22,7 +22,7 @@ export class MovieCommentDetailComponent implements OnInit {
   }
 
   updated(){
-    this.backendAPIService.UpdateCommentByUserIdMovieId(1, 20982, " bellissssssimo").subscribe({
+    this.backendAPIService.UpdateCommentByUserIdMovieId(1, 20982, "okay okay okay").subscribe({
       next: (res) => this.movieComment = res,
       error: (res) => console.log("not updated"),
       complete:() => console.log(this.movieComment)

@@ -13,8 +13,8 @@ export class MovieRatingComponent implements OnInit {
   @Input() movieId!: number;
   @Input() userId!: number;
 
+ 
   movieRating: any | null = null;
-  
 
   constructor(private backendService:BackendService) { }
 

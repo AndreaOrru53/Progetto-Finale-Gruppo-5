@@ -1,7 +1,22 @@
 <app-navbar></app-navbar>
-<ul *ngIf="loginService.isUserLoggedIn()">
-    <li *ngFor="let movie of moviesFavou | slice:0:10;">
-        {{movie.movie_Id}}, {{movie.user_Id}}
-    </li>
-</ul>
+    <h1>Lista Film Preferiti</h1>
+    <div *ngIf="loginService.isUserLoggedIn()">
+        <ul >
+            <li *ngFor="let movie of moviesFavou | slice:0:10;">
+                {{movie.movie_Id}}, {{movie.user_Id}}
+            </li>
+        </ul>
+
+
+        <h1>Commenti di un Utente</h1>
+    
+        <ul >
+            <li *ngFor="let comment of movieComments">
+                {{comment.user_id}}
+                {{comment.movie_id}}
+                {{comment.comment}}
+            </li>
+        </ul>
+    </div>
 <app-footer></app-footer>
+

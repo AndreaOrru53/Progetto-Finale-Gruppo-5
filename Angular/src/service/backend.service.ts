@@ -50,6 +50,10 @@ export class BackendService {
     return this.httpClient.get<MovieComment>(`http://localhost:5299/comments/${id}`);
   }
 
+  getAllMovieCommentsByUserId(userId: number | null){
+    return this.httpClient.get<MovieComment[]>(`http://localhost:5299/comments/userId/${userId}`);
+  }
+
   addMovieComment(movieComment: MovieComment){
     return this.httpClient.post(`http://localhost:5299/comments/`, movieComment);
   }
@@ -86,7 +90,7 @@ export class BackendService {
     const url = `http://localhost:8000/api/ratings/`;
     return this.httpClient.post(url, movie_rating)
   }
-
+  
   updateMovieRating(movie_rating: number, movie_id:number, user_id: number) {
     const url = `http://localhost:8000/api/ratings`;
     const body = {
