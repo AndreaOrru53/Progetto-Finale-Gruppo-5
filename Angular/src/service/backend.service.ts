@@ -40,6 +40,9 @@ export class BackendService {
   getFilmPreferitoByUserIdMovieId(user_id: number | null , movie_id: number | null){
     return this.httpClient.get<MovieFav>(`http://localhost:5000/favouritemoviebmu/${user_id}/${movie_id}`)
   }
+  deleteFilmPreferitoByUserMovieId(user_id: number | null, movie_id: number | null){
+    return this.httpClient.delete<MovieFav>(`http://localhost:5000/favouritemovie/${user_id}/${movie_id}`)
+  }
 
   //DOTNET
   getAllMovieComment(){

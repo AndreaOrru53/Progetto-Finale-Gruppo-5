@@ -8,7 +8,8 @@ import {
     deleteFavouriteMovie,
     getFavouriteMovieByMovieId,
     getFavouriteMovieByUserId,
-    getFavouriteMovieByUserIdMovieId
+    getFavouriteMovieByUserIdMovieId,
+    deleteFavouriteMovieByUserIdMovieID
  } from "../controllers/node-controller.js";
  
 const router = express.Router();
@@ -21,5 +22,6 @@ router.get('/favouritemoviebmu/:user_Id/:movie_Id', getFavouriteMovieByUserIdMov
 router.post('/favouritemovie', createFavouriteMovie);
 router.put('/favouritemovie/:id', updateFavouriteMovie);
 router.delete('/favouritemovie/:id', deleteFavouriteMovie);
+router.delete('/favouritemovie/:user_Id/:movie_Id',deleteFavouriteMovieByUserIdMovieID);
  
 export default router;
