@@ -5,11 +5,11 @@
     background-size: 100%;
     background-repeat: no-repeat;
     position: fixed;
+    background-position-y: -10vw;
 }
 
 .container-fluid img {
     width: 100%;
-    margin-top: -12%;
 }
 
 .bt{
@@ -17,11 +17,19 @@
 }
 
 .botton-play{
-    padding:23px 50px 60px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-top: 10%;
 }
 .scrt{
     margin-top: 60px;
     color: #FAEBD7;
+    font-size: 3vw;
+    text-align: center;
+    text-shadow: 2px 0px 10px rgb(209, 114, 114);
 }
 
 .header {
