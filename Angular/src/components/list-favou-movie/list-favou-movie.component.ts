@@ -69,7 +69,7 @@ export class ListFavouMovieComponent implements OnInit {
       next: () => console.log("Rating Dalated"),
       error: (err) => console.log("Rating Not Dalated", err)
     })
-    window.location.reload();
+   
   }
 
   refreshpage(){

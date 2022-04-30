@@ -20,14 +20,13 @@
       </li>
   </ul>
 </div>
-<div *ngIf="isListaVuota()">
-
-  <h1 class="no-list">NON HAI NESSUN FILM NELLA TUA LISTA</h1>
-
+<div *ngIf="isListaVuota()" class="container-fluid vh-100">
+  <h2 class="container-fluid vh-100">NON HAI NESSUN FILM NELLA TUA LISTA</h2>
+  <div class="botton-play">
+    <a *ngIf="loginService.isUserLoggedIn()" routerLink="/movie-game" class="nav-link"><button class="btn btn-primary">--- GIOCA ---</button></a>
+  </div>
 </div>
-
-
-    
+  
 <app-footer></app-footer>
 
 
