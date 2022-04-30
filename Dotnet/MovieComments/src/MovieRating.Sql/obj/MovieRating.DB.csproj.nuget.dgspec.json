@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Sql\\MovieRating.DB.csproj": {}
+    "C:\\Users\\andre\\OneDrive\\Desktop\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Sql\\MovieRating.DB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj": {
+    "C:\\Users\\andre\\OneDrive\\Desktop\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Desktop\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj",
         "projectName": "MovieRating.Core",
-        "projectPath": "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj",
-        "packagesPath": "C:\\Users\\Cenzo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\obj\\",
+        "projectPath": "C:\\Users\\andre\\OneDrive\\Desktop\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj",
+        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andre\\OneDrive\\Desktop\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Cenzo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -66,21 +66,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Sql\\MovieRating.DB.csproj": {
+    "C:\\Users\\andre\\OneDrive\\Desktop\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Sql\\MovieRating.DB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Sql\\MovieRating.DB.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\OneDrive\\Desktop\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Sql\\MovieRating.DB.csproj",
         "projectName": "MovieRating.DB",
-        "projectPath": "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Sql\\MovieRating.DB.csproj",
-        "packagesPath": "C:\\Users\\Cenzo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Sql\\obj\\",
+        "projectPath": "C:\\Users\\andre\\OneDrive\\Desktop\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Sql\\MovieRating.DB.csproj",
+        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\andre\\OneDrive\\Desktop\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Sql\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Cenzo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -94,8 +94,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj": {
-                "projectPath": "C:\\Users\\Cenzo\\Desktop\\TNV-PROGETTO FINALE\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj"
+              "C:\\Users\\andre\\OneDrive\\Desktop\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj": {
+                "projectPath": "C:\\Users\\andre\\OneDrive\\Desktop\\Progetto-Finale-Gruppo-5\\Dotnet\\MovieComments\\src\\MovieRating.Core\\MovieRating.Core.csproj"
               }
             }
           }
@@ -136,7 +136,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
