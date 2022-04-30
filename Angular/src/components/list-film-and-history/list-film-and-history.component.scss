@@ -1,6 +1,6 @@
 ul {
     padding: 0;
-    margin-left: 5%;
+    background-color: rgb(14, 13, 13);
 }
 
 li{
@@ -15,8 +15,10 @@ li{
 }
 
 .card {
-    margin: 0;
+    margin-left: 45px;
     height: 400px;
+    background-color: rgb(175, 171, 171);
+    border: 2px white solid;
 }
 
 ul{
