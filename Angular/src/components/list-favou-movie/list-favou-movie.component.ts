@@ -47,7 +47,11 @@ export class ListFavouMovieComponent implements OnInit {
   }
 
   isListaVuota(){
-   return this.moviesFavou;
+    if(this.moviesFavou.length>0){
+      return false;
+    }else{
+      return true;    
+    }
   }
 
 
