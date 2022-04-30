@@ -130,9 +130,13 @@ class RatingController extends Controller
      * @param  \App\Models\Rating  $rating
      * @return 'Illuminate\Http\JsonResponse'
      */
-    public function destroy(Rating $rating)
+    public function destroy($user_id, $movie_id)
     {
-        $rating->delete();
+        DB::table('ratings')->
+        select('movie_rating', 'user_id', 'movie_id')->
+        where('user_id', '=', $user_id)->
+        where('movie_id', '=', $movie_id)->
+        delete();
 
         return response()->json([
             'message' => 'Rating Deleted!',

@@ -107,8 +107,8 @@ export class BackendService {
     return this.httpClient.put(url, body)
   }
 
-  deleteMovieRatingById(id: number | null) {
-    return this.httpClient.delete(`http://localhost:8000/api/ratings/${id}`)
+  deleteMovieRatingByUserIdAndMovieId(user_id: number, movie_id: number) {
+    return this.httpClient.delete(`http://localhost:8000/api/ratings/${user_id}/${movie_id}`)
   }
 
 
