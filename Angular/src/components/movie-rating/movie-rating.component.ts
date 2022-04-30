@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MovieRating } from 'src/models/MovieRating';
 import { BackendService } from 'src/service/backend.service';
@@ -12,9 +12,8 @@ export class MovieRatingComponent implements OnInit {
 
   @Input() movieId!: number;
   @Input() userId!: number;
-
- 
-  movieRating: any | null = null;
+  
+  movieRating: MovieRating | null = null;
 
   constructor(private backendService:BackendService) { }
 
@@ -29,6 +28,9 @@ export class MovieRatingComponent implements OnInit {
       complete: () => console.log('funziona')
     });
   }
+
+
+  
 
 
 

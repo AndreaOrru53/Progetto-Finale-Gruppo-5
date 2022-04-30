@@ -1,4 +1,4 @@
-<form #movieCommentForm="ngForm" (submit)="AddMovieComment(movieCommentForm)">
+\<form #movieCommentForm="ngForm" (submit)="AddMovieComment(movieCommentForm)">
     <h5>Inserisci un commento di almeno 10 lettere!</h5>
     <input size="auto"
         [ngModel]
@@ -7,5 +7,5 @@
         type="text" 
     >
 
-    <button class="btn btn-primary"type="submit">Aggiungi Commento</button>
+    <button onClick="this.disabled=true;" class="btn btn-primary"type="submit">Aggiungi Commento</button>
   </form>

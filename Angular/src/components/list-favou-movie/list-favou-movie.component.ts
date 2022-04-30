@@ -58,7 +58,7 @@ export class ListFavouMovieComponent implements OnInit {
   deleteMoviefavour(userId: number, movieId: number){
     this.backendService.deleteFilmPreferitoByUserMovieId(userId, movieId).subscribe({
       next: () => console.log("Favourite Film Dalated"),
-      error: () => console.log("Favourite Film Not Dalated")
+      error: (err) => console.log("Favourite Film Not Dalated", err)
     })
     this.backendService.deleteCommentByUserIdMovieId(userId, movieId).subscribe(
     {
@@ -70,6 +70,10 @@ export class ListFavouMovieComponent implements OnInit {
       error: (err) => console.log("Rating Not Dalated", err)
     })
     window.location.reload();
+  }
+
+  refreshpage(){
+
   }
 
  
