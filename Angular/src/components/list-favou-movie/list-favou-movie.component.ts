@@ -33,11 +33,7 @@ export class ListFavouMovieComponent implements OnInit {
 
           this.backendService.getMovieRatingsByUserIdAndMovieId(1, id).subscribe({
             next: (val) => this.moviesRating[i] = val,
-<<<<<<< HEAD
             error: (val) =>  this.moviesRating[i] = val
-=======
-            error: (val) => this.moviesRating[i] = val
->>>>>>> 7a3e5be85aceba53c124da0b97543e6487ccdffa
           })
 
           this.backendService.getMovieCommentByUserIdMovieId(1, id).subscribe({
