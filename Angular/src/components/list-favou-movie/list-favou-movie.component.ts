@@ -42,7 +42,7 @@ export class ListFavouMovieComponent implements OnInit {
           })
         }
       }
-         
+          
     });
   }
 
