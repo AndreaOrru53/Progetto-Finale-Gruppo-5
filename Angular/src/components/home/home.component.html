@@ -13,13 +13,12 @@
 
 <body>
     <app-navbar></app-navbar>
+   
 
     
     <div class="container-fluid vh-100">
         <h2 class="scrt">Cerca i film che ti piaccionon di piu' o che non ancora conosci filtrando per data di uscita e salvali nei tuoi preferiti!</h2>
-        <div class="botton-play">
-            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/movie-game" class="nav-link"><button class="btn btn-primary">--- GIOCA ---</button></a>
-        </div>
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/movie-game" class="nav-link"><button class="btn"> AVVIA </button></a>
         
     </div>
     
