@@ -2,20 +2,38 @@
 <div *ngIf="!isListaVuota()">
   <h1>Lista Film Preferiti</h1>
   <ul >
+    <div id="carouselExampleControls" data-interval="false" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        
+      </div>
+    </div>
       <li *ngFor="let movie of moviesTMDB; let i = index">
           <div class="card" style="width: 25rem;">  
-              <img src="https://image.tmdb.org/t/p/w300{{movie?.poster_path}}" class="card-img-top" alt={{movie?.title}}>
-              <div class="card-body">
-                <h5 class="card-title">{{movie?.original_title}}</h5>
-                {{moviesRating[i].movie_rating}}
-                <div>
-                {{movieComments[i].comment}}
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+              <button type="button" data-bs-target="#carouselExampleCaptions" attr.data-bs-slide-to="{{i}}" class="active" aria-current="true" attr.aria-label="Slide {{i}}"></button>
+              <div class="carousel-inner">
+                <img src="https://image.tmdb.org/t/p/w300{{movie?.poster_path}}" class="card-img-top" alt={{movie?.title}}>
+                <div class="card-body">
+                  <h5 class="card-title">{{movie?.original_title}}</h5>
+                  {{moviesRating[i].movie_rating}}
+                  <div>
+                  {{movieComments[i].comment}}
+                  </div>
+                  <div>
+                    <button  class="btn btn-primary" (click)="deleteMoviefavour(1,movie.id)"> Cancella dalla tua lista</button>
+                  </div>  
                 </div>
-                <div>
-                  <button  class="btn btn-primary" (click)="deleteMoviefavour(1,movie.id)"> Cancella dalla tua lista</button>
-                </div>
-               
               </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" attr.data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" attr.data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            
             </div>
       </li>
   </ul>
@@ -28,6 +46,3 @@
 </div>
   
 <app-footer></app-footer>
-
-
-

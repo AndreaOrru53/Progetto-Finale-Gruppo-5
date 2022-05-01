@@ -1,15 +1,35 @@
-<nav class="navbar fixed-top navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="../home/">
-        <img src="../../assets/favicon.png" alt="" width="30" height="28" class="d-inline-block align-text-top">
-        Film&History
-        </a>
-        <a *ngIf="loginService.isUserLoggedIn()"  routerLink="/listFavouMovie" class="nav-link">Lista Miei Film preferiti</a>
-        <a  *ngIf="loginService.isUserLoggedIn()" routerLink="/addCustomers" class="nav-link">Aggiungi Utente</a>
-        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">LogOut</a>
-        
-        <a class="navbar-brand" href="../login">
-          <a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link"><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">Login</button></a> 
-        </a>
+<nav class="navbar navbar-light bg-light" aria-label="First navbar example">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="../home/">
+      <img src="../../assets/favicon.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+      Film&History
+      </a>
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse collapse" id="navbarsExample01" style="">
+      <ul class="navbar-nav me-auto mb-2">
+        <li class="nav-item">
+          <a class="nav-link active" *ngIf="loginService.isUserLoggedIn()" aria-current="page" href="../home/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="loginService.isUserLoggedIn()"  routerLink="/listFavouMovie" class="nav-link">Lista Miei Film preferiti</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">LogOut</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">GitHub Sviluppatori</a>
+          <ul class="dropdown-menu" aria-labelledby="dropdown01">
+            <li><a class="dropdown-item" href="https://github.com/AndreaOrru53" target="_blank">Andrea Orrù</a></li>
+            <li><a class="dropdown-item" href="https://github.com/MICK-LAI" target="_blank">Michele Lai</a></li>
+            <li><a class="dropdown-item" href="https://github.com/EdivanSteri" target="_blank">Edivan Steri</a></li>
+            <li><a class="dropdown-item" href="https://github.com/stecerto" target="_blank">Stefano Certo</a></li>
+          </ul>
+        </li>
+      </ul>
+
     </div>
-  </nav>
+  </div>
+</nav>

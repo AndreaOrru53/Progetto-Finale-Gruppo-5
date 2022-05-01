@@ -1,21 +1,28 @@
-<app-navbar></app-navbar>
-<form #loginForm="ngForm" (ngSubmit)="checkLogin(loginForm)">
-    <div class="imgcontainer">
-      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="../../assets/user.png" id="icon" alt="User Icon" />
     </div>
-  
-    <div class="container">
-      <div>
-        <label for="uname"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="username" [(ngModel)]="username" required>
-    
-        <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="password" required>
-      </div>  
-      <button class="btn btn-success">Login</button>
-      <!-- <button type="submit">Login</button>  -->
-      
+
+    <!-- Login Form -->
+    <form  #loginForm="ngForm" (ngSubmit)="checkLogin(loginForm)">
+      <input type="text" id="login" class="fadeIn second" placeholder="Username" name="username" [(ngModel)]="username" required>
+      <input type="text" id="password" class="fadeIn third" name="password" placeholder="Password" [(ngModel)]="password" required>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+     
     </div>
-  
-  
-  </form>
+
+  </div>
+</div>
