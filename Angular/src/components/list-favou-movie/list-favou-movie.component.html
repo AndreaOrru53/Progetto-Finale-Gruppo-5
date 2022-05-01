@@ -81,10 +81,12 @@
             <h3 *ngSwitchCase="4">Valutazione: ★ ★ ★ ★</h3>
             <h3 *ngSwitchCase="5">Valutazione: ★ ★ ★ ★ ★</h3>
           </div>
-
-          <h3 >Commento: </h3>
-          <h5 class="rating">{{movieComments[i].comment}}</h5>
-          <button  class="btn btn-primary" onclick="document.location.reload()" (click)="deleteMoviefavour(1,movie.id)"> Cancella dalla tua lista</button>
+          <div *ngIf="findComment(movie.id)">
+            <h3 >Commento: </h3>
+          <h5 class="rating">{{comment?.comment}}</h5>
+          </div>
+          
+          <button  class="btn btn-primary" (click)="deleteMoviefavour(1,movie.id)" > Cancella dalla tua lista</button>
         </div>
 
       </div>

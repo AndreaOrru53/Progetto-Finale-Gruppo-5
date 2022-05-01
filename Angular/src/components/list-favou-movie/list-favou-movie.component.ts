@@ -17,12 +17,26 @@ export class ListFavouMovieComponent implements OnInit {
   moviesTMDB: MovieTMDB []= [];
   moviesRating: MovieRating [] = [];
   movieComments: MovieComment [] = [];
+  allMovieComments: MovieComment [] | null = [];
+  comment: MovieComment | undefined = undefined;
 
   x: number = 0;
 
-  constructor(private backendService:BackendService,  public loginService: AuthenticationService) { }
+  constructor(private backendService:BackendService,  public loginService: AuthenticationService) { 
+
+  }
 
   ngOnInit(): void {
+
+    this.backendService.getAllMovieComment().subscribe(
+      {
+        next: (val) => {
+          this.allMovieComments= val,
+          console.log(this.allMovieComments)
+        }, 
+        error: () => console.log("error", this.allMovieComments)
+      })   
+
     this.backendService.getFilmPreferitiByUserId(1).subscribe({
       next: (res) => {
         this.moviesFavou = res;
@@ -36,11 +50,6 @@ export class ListFavouMovieComponent implements OnInit {
           this.backendService.getMovieRatingsByUserIdAndMovieId(1, id).subscribe({
             next: (val) => this.moviesRating[i] = val,
             error: (val) =>  this.moviesRating[i] = val
-          })
-
-          this.backendService.getMovieCommentByUserIdMovieId(1, id).subscribe({
-            next: (val) => this.movieComments[i] = val,
-            error: (val) => this.movieComments[i] = val
           })
         }
       }
@@ -71,12 +80,27 @@ export class ListFavouMovieComponent implements OnInit {
       next: () => console.log("Rating Dalated"),
       error: (err) => console.log("Rating Not Dalated", err)
     })
+
+    setTimeout(
+      function(){ 
+      location.reload(); 
+      }, 1000);
    
   }
 
-  refreshpage(){
+  findComment(movieId: number){
 
+    this.comment  = this.allMovieComments?.find(x => x.user_id == 1 &&  x.movie_id == movieId);
+
+    if(this.comment != undefined){
+      return true;
+    }else{
+      console.log("commento non torvato")
+      return false;
+    }
   }
+
+
 
   increment(){
     if(this.x < this.moviesTMDB.length-1 && this.x >= 0){
