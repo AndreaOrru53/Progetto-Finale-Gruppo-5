@@ -74,12 +74,13 @@
           </div>
           </div>
           <h1>{{movie?.original_title}}</h1>
-          <div [ngSwitch]="moviesRating[i].movie_rating">
-            <h3 *ngSwitchCase="1">Valutazione: ★</h3>
-            <h3 *ngSwitchCase="2">Valutazione: ★ ★</h3>
-            <h3 *ngSwitchCase="3">Valutazione: ★ ★ ★</h3>
-            <h3 *ngSwitchCase="4">Valutazione: ★ ★ ★ ★</h3>
-            <h3 *ngSwitchCase="5">Valutazione: ★ ★ ★ ★ ★</h3>
+          <h3>Valutazione:</h3>
+          <div class="stars" [ngSwitch]="moviesRating[i].movie_rating">
+            <h3 *ngSwitchCase="1"> ★</h3>
+            <h3 *ngSwitchCase="2"> ★ ★</h3>
+            <h3 *ngSwitchCase="3"> ★ ★ ★</h3>
+            <h3 *ngSwitchCase="4"> ★ ★ ★ ★</h3>
+            <h3 *ngSwitchCase="5"> ★ ★ ★ ★ ★</h3>
           </div>
 
           <h3 >Commento: </h3>
