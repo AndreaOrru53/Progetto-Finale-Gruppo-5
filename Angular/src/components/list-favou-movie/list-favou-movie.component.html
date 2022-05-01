@@ -12,7 +12,7 @@
                 {{movieComments[i].comment}}
                 </div>
                 <div>
-                  <button  class="btn btn-primary" (click)="deleteMoviefavour(1,movie.id)"> Cancella dalla tua lista</button>
+                  <button  class="btn btn-primary" onclick="document.location.reload()" (click)="deleteMoviefavour(1,movie.id)"> Cancella dalla tua lista</button>
                 </div>
                
               </div>
@@ -20,14 +20,35 @@
       </li>
   </ul>
 </div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <div *ngIf="isListaVuota()" class="container-fluid vh-100">
-  <h2 class="container-fluid vh-100">NON HAI NESSUN FILM NELLA TUA LISTA</h2>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top" >Non sono presenti film nella tua lista preferiti!</h1>
+  </div>
   <div class="botton-play">
     <a *ngIf="loginService.isUserLoggedIn()" routerLink="/movie-game" class="nav-link"><button class="btn btn-primary">--- GIOCA ---</button></a>
   </div>
 </div>
   
 <app-footer></app-footer>
+<head>
 
+  <style>
+  body,h1 {font-family: "Raleway", sans-serif}
+  body, html {height: 100%}
+  .bgimg {
+    background-image: url('/w3images/forestbridge.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+  }
+  </style>
+  </head>
+  <body>
+  
+  
 
 
