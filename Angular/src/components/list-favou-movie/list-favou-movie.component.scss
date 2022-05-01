@@ -33,7 +33,8 @@ li{
 }
 
 .card {
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 ul{
@@ -44,5 +45,10 @@ ul{
     display: none;
 }
 h1{
-    color: bisque;
+    color: black;
 }
+
+.rating {
+ content: "★ ";
+}
+

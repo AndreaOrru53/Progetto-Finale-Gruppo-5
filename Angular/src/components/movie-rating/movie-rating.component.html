@@ -6,7 +6,7 @@
 
 <body>
 
-    <form #ratingForm="ngForm" (ngSubmit)="invio(ratingForm)">
+    <form #ratingForm="ngForm">
       <div class="rate">
         <input type="radio" id="star5" name="rate" value="5" ngModel/>
         <label for="star5" title="text">1 star</label>
@@ -19,7 +19,7 @@
         <input type="radio" id="star1" name="rate" value="1" ngModel/>
         <label for="star1" title="text">5 stars</label>
       </div>
-      <button onClick="this.disabled=true;" type="submit" class="btn btn-primary" > Aggiungi valutazione</button>
+      <button (click)="invio(ratingForm)" onclick="this.disabled=true" type="submit" class="btn btn-primary" > Aggiungi valutazione</button>
 
     </form>
 

@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<!--<app-navbar></app-navbar>
 <div *ngIf="!isListaVuota()">
   <h1>Lista Film Preferiti</h1>
   <ul >
@@ -52,4 +52,50 @@
   </div>
 </div>
   
-<app-footer></app-footer>
+<app-footer></app-footer>-->
+<app-navbar></app-navbar>
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+
+  </div>
+  <div class="card" style="width: 25rem;">
+    <div class="carousel-inner">
+
+      <div *ngFor="let movie of moviesTMDB; let i = index">
+
+      <div *ngIf="i == x" class="carousel-item-active">
+
+        <img src="https://image.tmdb.org/t/p/w300{{movie?.poster_path}}" class="card-img-top" alt={{movie?.title}}>
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+
+          </div>
+          </div>
+          <h1>{{movie?.original_title}}</h1>
+          <div [ngSwitch]="moviesRating[i].movie_rating">
+            <h3 *ngSwitchCase="1">Valutazione: ★</h3>
+            <h3 *ngSwitchCase="2">Valutazione: ★ ★</h3>
+            <h3 *ngSwitchCase="3">Valutazione: ★ ★ ★</h3>
+            <h3 *ngSwitchCase="4">Valutazione: ★ ★ ★ ★</h3>
+            <h3 *ngSwitchCase="5">Valutazione: ★ ★ ★ ★ ★</h3>
+          </div>
+
+          <h3 >Commento: </h3>
+          <h5 class="rating">{{movieComments[i].comment}}</h5>
+          <button  class="btn btn-primary" onclick="document.location.reload()" (click)="deleteMoviefavour(1,movie.id)"> Cancella dalla tua lista</button>
+        </div>
+
+      </div>
+
+    </div >
+    <button (click)="decrement()" class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button (click)="increment()" class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+</div>

@@ -18,6 +18,8 @@ export class ListFavouMovieComponent implements OnInit {
   moviesRating: MovieRating [] = [];
   movieComments: MovieComment [] = [];
 
+  x: number = 0;
+
   constructor(private backendService:BackendService,  public loginService: AuthenticationService) { }
 
   ngOnInit(): void {
@@ -76,9 +78,27 @@ export class ListFavouMovieComponent implements OnInit {
 
   }
 
- 
+  increment(){
+    if(this.x < this.moviesTMDB.length-1 && this.x >= 0){
+      this.x++;
+    }
+    else{
+      this.x = 0;
+    }
+  }
 
-  
+  decrement(){
+    if(this.x > 0){
+      this.x--;
+    }
+    else{
+      this.x = this.moviesTMDB.length-1;
+    }
 
+  }
+
+  makeStarArray(starNumber: number){
+    return Array<number>(starNumber+1)
+  }
 
 }
