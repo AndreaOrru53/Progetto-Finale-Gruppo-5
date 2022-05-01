@@ -54,9 +54,10 @@
   
 <app-footer></app-footer>-->
 <app-navbar></app-navbar>
+<div *ngIf="!isListaVuota()"></div>
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
-
+</div>
   </div>
   <div class="card" style="width: 25rem;">
     <div class="carousel-inner">
@@ -98,4 +99,16 @@
       <span class="visually-hidden">Next</span>
     </button>
 
+</div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<div *ngIf="isListaVuota()" class="container-fluid vh-100">
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top" >Non sono presenti film nella tua lista preferiti!</h1>
+  </div>
+  <div class="botton-play">
+    <a *ngIf="loginService.isUserLoggedIn()" routerLink="/movie-game" class="nav-link"><button class="btn btn-primary">--- GIOCA ---</button></a>
+  </div>
 </div>
